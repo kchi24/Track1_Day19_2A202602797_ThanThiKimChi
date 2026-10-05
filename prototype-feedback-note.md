@@ -8,11 +8,20 @@
 
 ---
 
-## 1. Kịch bản mở đầu & Outcome Task (Đã dùng trong buổi test)
+## 1. Kịch bản mở đầu, Context & Outcome Task (Đã dùng trong buổi test)
 
-* **Lời mở đầu trung lập**:
-  > *"Cảm ơn Nam đã tham gia. Mình đang nghiên cứu cách học viên vượt qua các đoạn kiến thức khó khi tự học trực tuyến. Trước mặt bạn là một bài học mẫu về Gradient Descent. Trong bài có một công thức toán mà nhiều người thường bị khựng lại. Mình có 3 công cụ hỗ trợ khác nhau (Option A, B, C). Bạn hãy trải nghiệm từng công cụ để tìm hiểu xem công thức này đang đòi hỏi kiến thức nền tảng nào và vượt qua chỗ bế tắc đó nhé. Bạn cứ thoải mái thao tác và có thể nói to suy nghĩ trong đầu nếu muốn, không có thao tác nào là sai cả."*
-* **Outcome Task**: *"Hãy xác định xem ký hiệu $\frac{\partial L}{\partial w}$ trong công thức đòi hỏi kiến thức nền gì từ trước và làm sao để hiểu được nó."*
+* **Relevant Context (Câu hỏi sàng lọc ngữ cảnh — dưới 2 phút)**:
+  * *Facilitator hỏi*: *“Gần đây bạn có từng đang tự học một bài học trực tuyến mới (như Machine Learning, Toán giải tích hay Lập trình) mà gặp một công thức toán hoặc khái niệm phức tạp khiến bạn nhận ra mình đã quên một phần kiến thức nền tảng từ trước không?”*
+  * *Tester 1 phản hồi*: *“Có chứ, tuần trước mình đọc bài về Mạng nơ-ron tích chập (CNN), đến đoạn giải thích phép nhân ma trận trọng số và đạo hàm hàm mất mát thì mình khựng lại vì quên mất cách tính đạo hàm riêng nhiều biến từ hồi năm 2. Lúc đó mình đành phải mở YouTube xem lại cả bài giải tích dài 30 phút, rất oải.”*
+  * $\rightarrow$ **Xác nhận**: Tester 1 có context hoàn toàn trùng khớp với bài toán nghiên cứu.
+
+* **Lời mở đầu trung lập (Neutral Briefing)**:
+  > *“Cảm ơn Nam đã tham gia. Mình đang nghiên cứu cách học viên vượt qua các đoạn kiến thức khó khi tự học trực tuyến. Trước mặt bạn là một bài học mẫu về Gradient Descent. Trong bài có một công thức toán mà nhiều người thường bị khựng lại. Mình có 3 công cụ hỗ trợ khác nhau (Option A, B, C). Bạn hãy trải nghiệm từng công cụ để tìm hiểu xem công thức này đang đòi hỏi kiến thức nền tảng nào và vượt qua chỗ bế tắc đó nhé. Bạn cứ thoải mái thao tác và nói to suy nghĩ trong đầu nếu muốn, không có thao tác nào là sai cả.”*
+
+* **Outcome Task (Nói kết quả cần đạt, không nói nút cần bấm)**:
+  > *“Trong tình huống này, hãy dùng từng phương án để **xác định xem ký hiệu $\frac{\partial L}{\partial w}$ trong công thức đòi hỏi kiến thức nền gì từ trước và làm sao để hiểu được nó**.”*
+
+* **5 Tiêu chí quan sát trọng tâm**: (1) First action; (2) Hesitation; (3) Evidence read/ignored; (4) Correction & recovery; (5) Trade-off bộc lộ.
 
 ---
 

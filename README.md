@@ -187,15 +187,36 @@ RESULT / USER DECISION (Kết quả gỡ kẹt & Quyền tự quyết / Recovery
 
 ### Chặng 5 — Chuẩn bị Test Prompt & Tiêu chí quan sát (15 phút)
 
-* **Lời mở đầu trung lập (Neutral Briefing)**:
-  > *"Cảm ơn bạn đã tham gia. Mình đang nghiên cứu cách người học vượt qua các đoạn kiến thức khó khi tự học trực tuyến. Trước mặt bạn là một bài học mẫu về Gradient Descent. Trong bài có một công thức toán mà nhiều người thường bị khựng lại. Mình có 3 công cụ hỗ trợ khác nhau (Option A, B, C). Bạn hãy trải nghiệm từng công cụ để tìm hiểu xem công thức này đang đòi hỏi kiến thức nền tảng nào và vượt qua chỗ bế tắc đó nhé. Bạn cứ thoải mái thao tác và nói to suy nghĩ trong đầu, không có thao tác nào là sai cả."*
-* **Outcome Task**: *"Hãy xác định xem ký hiệu $\frac{\partial L}{\partial w}$ trong công thức đòi hỏi kiến thức nền gì từ trước và làm sao để hiểu được nó."*
-* **Bảng tiêu chí quan sát hành vi (Observation Focus)**:
-  1. *Thao tác đầu tiên*: Người dùng click vào đâu trước tiên khi nhìn thấy công thức?
-  2. *Điểm ngập ngừng / Bối rối*: Họ có đọc câu hỏi chẩn đoán không? Có bị ngợp trước cây sơ đồ không? Có tìm thấy thanh trượt không?
-  3. *Mức độ kiên nhẫn*: Họ dành bao nhiêu giây để đọc nội dung giải thích của AI?
-  4. *Phản xạ phục hồi (Recovery)*: Khi AI đưa ra kết quả, họ bấm tiếp tục hay tìm cách sửa?
-  5. *Đánh đổi*: Họ thích sự nhanh gọn (Inline) hay thích được định hướng từng bước (Socratic) hay muốn nhìn thấy toàn cảnh (Concept Radar)?
+#### 1. Chốt Context và Outcome Task
+* **Relevant Context (Câu hỏi sàng lọc ngữ cảnh — tối đa 2 phút trước khi test)**:
+  > *“Gần đây bạn có từng đang tự học một bài học trực tuyến mới (như Machine Learning, Toán giải tích hay Lập trình) mà gặp một công thức toán hoặc khái niệm phức tạp khiến bạn nhận ra mình đã quên một phần kiến thức nền tảng từ trước không?”*  
+  *(Lưu ý: Nếu tester chưa từng gặp bối cảnh này, buổi test vẫn hữu ích để phát hiện interaction breakdown nhưng nhóm không dùng để đưa ra kết luận value claim mạnh).*
+
+* **Outcome Task (Tập trung vào kết quả cần đạt, tuyệt đối không chỉ dẫn nút cần bấm)**:
+  > *“Trong tình huống này, hãy dùng từng phương án (A, B, C) để **xác định xem ký hiệu $\frac{\partial L}{\partial w}$ trong công thức Gradient Descent đòi hỏi kiến thức nền tảng gì từ trước và vượt qua chỗ bế tắc đó để tiếp tục bài học**.”*
+
+* **Observation Focus (5 tiêu chí quan sát hành vi cốt lõi)**:
+  1. **First action (Thao tác đầu tiên)**: Khi vừa nhìn vào màn hình bài học và công thức, tester click vào đâu trước tiên (bấm nút chat ở A, nhìn vào cây sơ đồ ở B, hay click vào ký hiệu ở C)?
+  2. **Hesitation (Điểm ngập ngừng / Bối rối)**: Họ khựng lại ở đâu lâu nhất (đắn đo chọn đáp án chẩn đoán ở A, bị ngợp trước các mũi tên sơ đồ ở B, hay loay hoay tìm thanh trượt ở C)?
+  3. **Evidence read / ignored (Bằng chứng được đọc hay bị bỏ qua)**: Họ có nhận ra chỉ số tin cậy 88% ở A không? Có chú ý đến nhãn cảnh báo *"Vùng dễ nhầm lẫn nhất 85% ⚠️"* ở B không? Có đọc tầng so sánh cũ/mới ở C không?
+  4. **Correction / Recovery (Phản xạ sửa sai và lấy lại quyền kiểm soát)**: Khi nhận được kết quả từ hệ thống, tester quay lại bài học ngay hay tìm cách sửa? Họ có nhận ra nút `↺ Chẩn đoán lại`, `User Override` (A), `↺ Đặt lại bản đồ` (B), hay `Trở về mặc định` (C)?
+  5. **Option được chọn & Trade-off (Đánh đổi thực tế của người dùng)**: Họ chấp nhận đánh đổi giữa sự tiện lợi không gián đoạn mạch đọc (Inline C) và nhu cầu được "bác sĩ bắt đúng bệnh" khi hoàn toàn bế tắc (Socratic A) như thế nào?
+
+---
+
+#### 2. Bộ Luật Facilitation (6 Nguyên tắc thép & 3 Câu cứu hộ)
+* **6 Nguyên tắc điều phối**:
+  1. **Tester tự điều khiển**: Tester toàn quyền cầm chuột và thao tác trên prototype; facilitator không chạm vào máy.
+  2. **Nhất quán một task**: Dùng chính xác cùng một Outcome Task cho cả 3 option A, B, C.
+  3. **Không giải thích hộ**: Không giải thích ý nghĩa công thức toán, không chỉ trước icon hay nút bấm.
+  4. **Không lấp im lặng**: Chấp nhận khoảng lặng khi tester đang đọc tài liệu hoặc suy nghĩ.
+  5. **Không hỏi câu hỏi khen chê cảm tính**: Tuyệt đối không hỏi *“Bạn có thích tính năng này không?”* hay *“Bạn thấy cái nào đẹp hơn?”*.
+  6. **Phản hồi bằng câu hỏi ngược**: Khi tester hỏi *“Cái này dùng thế nào?”*, facilitator hỏi lại: *“Theo bạn, nó nên hoạt động như thế nào?”*.
+
+* **Ba câu cứu hộ chuẩn The Mom Test (Dùng khi tester bị kẹt hoặc im lặng quá lâu)**:
+  * 🟢 **Câu 1**: *“Bạn cứ nói to suy nghĩ trong đầu của mình nhé.”*
+  * 🟢 **Câu 2**: *“Bạn sẽ làm gì tiếp theo?”*
+  * 🟢 **Câu 3**: *“Theo bạn, nó nên hoạt động như thế nào?”*
 
 ---
 
