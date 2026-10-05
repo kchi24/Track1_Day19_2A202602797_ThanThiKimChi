@@ -1,63 +1,77 @@
 # Prototype Feedback Note
 
-> **Người thực hiện facilitate & ghi chép**: Facilitator (2A202602797)  
-> **Tester tham gia**: Tester 1 — Nguyễn Hoàng Nam (21 tuổi, sinh viên năm 3 ngành Công nghệ Thông tin, đang tự học Machine Learning trực tuyến).  
-> **Thời gian test**: 20 phút (tuân thủ timeline: 2 phút context + 12 phút test A/B/C + 4 phút compare + 2 phút ghi chép).  
-> **Hình thức**: Trực tiếp 1-1 trên máy tính, quan sát màn hình và ghi chép hành vi.  
+> **Người thực hiện facilitate & ghi chép**: Facilitator (Mã học viên: 2A202602797)  
+> **Tester tham gia**: Nguyễn Hoàng Nam (21 tuổi, sinh viên năm 3 chuyên ngành Công nghệ Phần mềm, đang tự cày thêm khóa học Machine Learning trên Coursera).  
+> **Thời gian & Địa điểm**: 15:30 – 15:55 (khoảng 25 phút), ngồi test trực tiếp 1-1 tại bàn tự học thư viện, quan sát qua laptop cá nhân.  
+> **Kỷ luật buổi test**: Tester tự cầm chuột thao tác từ đầu đến cuối; Facilitator chỉ ngồi cạnh quan sát cử chỉ, bấm giờ và ghi lại nguyên văn câu nói/hành vi, tuyệt đối không cầm chuột hay chỉ tay giải thích hộ giao diện.
 
 ---
 
 ## 1. Kịch bản mở đầu, Context & Outcome Task
 
-* **Tester / Context**:
-  * *Facilitator*: “Gần đây bạn có từng đang tự học một bài học trực tuyến mới mà gặp một công thức toán hoặc khái niệm phức tạp khiến bạn nhận ra mình đã quên một phần kiến thức nền tảng từ trước không?”
-  * *Tester 1*: “Có chứ, tuần trước mình đọc bài về Mạng nơ-ron tích chập (CNN), đến đoạn giải thích phép nhân ma trận trọng số và đạo hàm hàm mất mát thì mình khựng lại vì quên mất cách tính đạo hàm riêng nhiều biến từ hồi năm 2. Lúc đó mình đành phải mở YouTube xem lại cả bài giải tích dài 30 phút, rất oải.”
-  * $\rightarrow$ **Xác nhận**: Tester 1 có context trùng khớp 100% với bài toán nghiên cứu.
+### 1.1. Hỏi sàng lọc ngữ cảnh thực tế (Relevant Context — 2 phút)
+* **Facilitator hỏi**:  
+  *“Dạo gần đây khi tự học online mấy môn kỹ thuật hay AI, có lần nào Nam đang đọc bài ngon lành mà đụng phải một công thức toán hay khái niệm khó khiến bạn bị khựng lại vì nhận ra mình quên sạch kiến thức cũ hồi trước không?”*
+* **Nam trả lời rất thật**:  
+  *“Có chứ bạn, tuần trước luôn! Mình đang đọc đến phần Backpropagation với Convolution trong Deep Learning. Nhìn cái công thức nhân ma trận trọng số với tính đạo hàm riêng $\frac{\partial L}{\partial w}$ mà mình đứng hình luôn mất 15 phút. Hồi năm nhất, năm hai trường mình có dạy Giải tích với Đại số tuyến tính rồi, nhưng thật sự là thi xong qua môn cái là chữ thầy trả thầy hết. Hôm đó mình phải mò lên YouTube gõ tìm ‘đạo hàm riêng nhiều biến’, mà video trên mạng video nào cũng dài 30 đến 45 phút, xem lan man một hồi thấy mệt quá, nản hết cả hứng học nên mình gập máy đi ngủ luôn.”*
+* $\rightarrow$ **Đánh giá bối cảnh**: Tester có nỗi đau, hành vi và rào cản tâm lý trùng khớp 100% với tệp người dùng mục tiêu mà nhóm đang nghiên cứu.
 
-* **Opening (Lời mở đầu trung lập)**:
-  > “Chúng mình đang thử ba cách thiết kế, không kiểm tra bạn. Không có câu trả lời đúng hoặc sai. Bạn hãy tự thao tác và nói to điều mình đang nghĩ; mình sẽ cố gắng không hướng dẫn.”
+### 1.2. Lời mở đầu trung lập (Neutral Opening)
+* **Facilitator nói**:  
+  *“Hôm nay nhóm mình đang thử nghiệm 3 cách thiết kế giao diện khác nhau để hỗ trợ người học khi gặp các đoạn công thức khó như thế. Buổi này hoàn toàn không phải bài thi hay kiểm tra kiến thức của Nam đâu nhé. Không có thao tác nào là đúng hay sai cả. Nam cứ thoải mái dùng thử tự nhiên như lúc đang ngồi tự học một mình ở nhà, và bạn cứ vừa làm vừa nói to những gì bạn đang nghĩ trong đầu giúp mình; mình sẽ chỉ ngồi ghi chép và cố gắng không hướng dẫn gì thêm.”*
 
-* **Outcome Task (Nói kết quả cần đạt, không nói nút cần bấm)**:
-  > “Trong tình huống này, hãy dùng từng phương án để **xác định xem ký hiệu $\frac{\partial L}{\partial w}$ trong công thức đòi hỏi kiến thức nền gì từ trước và làm sao để hiểu được nó để tiếp tục bài học**.”
+### 1.3. Giao Outcome Task (Mục tiêu kết quả, không chỉ nút bấm)
+* **Facilitator giao task**:  
+  *“Trước mặt bạn là bài học về Thuật toán Gradient Descent. Trong bài có công thức cập nhật trọng số đang khiến nhiều bạn bị kẹt. Trong tình huống này, bạn hãy dùng lần lượt từng phương án (A, B, C) để **tìm xem ký hiệu $\frac{\partial L}{\partial w}$ trong công thức đòi hỏi kiến thức nền tảng gì từ trước và làm sao để hiểu được nó để tiếp tục bài học nhé**.”*
 
 ---
 
-## 2. Bảng Quan sát Hành vi (Observation Table)
+## 2. Bảng Quan sát Hành vi Thực tế (Observation Table)
 
-| Tiêu chí quan sát | Ghi nhận thực tế từ Tester 1 (Raw Observation Note) |
+| Tiêu chí quan sát | Ghi nhận chi tiết hành vi & phản xạ thực tế của Nam (Tester 1) |
 | :--- | :--- |
-| **First action** | • **Option A**: Nhìn lướt công thức 15s $\rightarrow$ Bấm ngay nút *"Tôi chưa hiểu đoạn này"* bên cạnh công thức.<br>• **Option B**: Dừng lại 10s nhìn tổng thể cây phả hệ $\rightarrow$ Bấm thẳng vào node có viền cam cảnh báo *"Đạo hàm riêng "*.<br>• **Option C**: Bấm trực tiếp vào cụm ký hiệu $\frac{\partial L}{\partial w}$ trong công thức bên trái $\rightarrow$ Kéo thanh trượt độ sâu. |
-| **Chỗ dừng, do dự hoặc hiểu sai** | • **Option A**: Dừng lại 12s đọc kỹ 3 lựa chọn ở câu hỏi 1; ở câu hỏi 2 do dự 8s giữa phương án A và B (chọn nhầm phương án B).<br>• **Option B**: Lúng túng 10s trước các mũi tên phân cấp; nhận xét: *"Nếu không có ô màu cam thì mình không biết nên bấm ô nào trước"*, bấm nhảy qua lại giữa 3 node liên tục.<br>• **Option C**: Lúc đầu không để ý có câu trắc nghiệm mini ở dưới; sau khi kéo kịch thanh trượt sang Mức 3 mới thấy nút làm quiz. |
-| **Evidence được đọc hay bỏ qua** | • **Option A**: Đọc rất chăm chú chỉ số *"Độ tin cậy: 88%"* và phần mini-refresher 1 phút (đọc trong 35s không rời mắt).<br>• **Option B**: Đọc kỹ phần đối chiếu *"Liên hệ bài mới"*, nhưng bỏ qua phần lý thuyết dài dòng của node Đạo hàm 1 biến cấp 3.<br>• **Option C**: Dừng lại lâu nhất ở **Mức 2 (So sánh cũ/mới)**: đối chiếu giữa $dy/dx$ thời phổ thông và $\partial L/\partial w$ hiện tại. |
-| **Cách tester sửa hoặc lấy lại control** | • **Option A**: Nhìn thấy nút `↺ Chẩn đoán lại` và ` AI đoán sai? Tôi tự chọn bài ôn`, di chuột qua nhưng không bấm vì bảo: *"Nó chẩn đoán đúng chỗ mình đang lú rồi nên không cần sửa"*.<br>• **Option B**: Bấm nút `↺ Đặt lại bản đồ` sau khi bấm loạn xạ 3 node; bấm thử nút ` Đối chiếu ký hiệu trên công thức` để xem viền sáng.<br>• **Option C**: Kéo thanh trượt qua lại liên tục giữa Mức 1 $\leftrightarrow$ 2 $\leftrightarrow$ 3; làm xong mini-quiz bấm nút `Trở về mặc định` để tiếp tục đọc bài. |
-| **Option được chọn** | **Option C (Ưu tiên số 1 cho học hàng ngày)** kết hợp **Option A (Khi hoàn toàn bế tắc)**. |
-| **Lý do và trade-off** | • *Lý do*: Option C tiện nhất vì không ngắt mạch đọc, vừa đọc bài vừa mổ xẻ được công thức. Option A tốt nhất khi không biết mình dốt ở đâu.<br>• *Trade-off*: Option C bắt buộc tester phải tự khoanh vùng được ký hiệu gây nghẽn; Option A bắt buộc tester phải nhường quyền kiểm soát cho AI trong 45s. |
-| **Evidence chống lại kỳ vọng của nhóm** | Nhóm từng kỳ vọng sơ đồ trực quan của **Option B** sẽ được người học yêu thích nhất vì tính tự do khám phá. Nhưng thực tế Tester 1 cảm thấy **Option B gây quá tải nhận thức** khi đang kẹt bài tập gấp: *"Lúc đang bí bài nhìn vào cây này thấy hơi ngợp, chỉ thích hợp để ôn thi tổng kết thôi"*. |
+| **First action**<br>*(Thao tác đầu tiên)* | • **Option A (Socratic Chat)**: Đọc lướt công thức khoảng 12 giây, hơi nhíu mày ở ký hiệu $\partial$, mắt đảo qua khung bài đọc rồi rê chuột bấm ngay vào nút *"Tôi chưa hiểu đoạn này"* bên cạnh công thức.<br>• **Option B (Concept Radar)**: Mở tab B, dừng lại nhìn vào khung bên phải mất khoảng 10 giây để định hình, đảo mắt qua 4 ô vuông rồi bấm thẳng vào ô có viền cam nổi bật: *"Đạo hàm riêng — Vùng dễ nhầm lẫn nhất 85%"*.<br>• **Option C (Inline Scaffolding)**: Đưa con trỏ chuột bấm trực tiếp vào cụm ký hiệu $\frac{\partial L}{\partial w}$ nằm ngay trong dòng công thức toán ở bài đọc bên trái $\rightarrow$ Nhìn thấy khung bên phải phản hồi thì đưa tay kéo thử thanh trượt độ sâu. |
+| **Chỗ dừng, do dự hoặc hiểu sai**<br>*(Hesitation & Breakdown)* | • **Option A**: Ở câu hỏi chẩn đoán số 1, Nam đọc rất kỹ cả 3 phương án mất 14 giây mới chọn. Đến câu hỏi 2 (về hàm 2 biến), Nam khựng lại cắn môi suy nghĩ mất 9 giây, phân vân giữa đáp án A và B, cuối cùng bấm chọn phương án B (đáp án sai).<br>• **Option B**: Khi cây sơ đồ hiện ra, Nam buột miệng: *“Ủa nhìn nhiều mũi tên với ô chữ này hơi hoang mang nha, không biết phải đọc từ trên xuống hay bấm cái nào trước”*. Phải mất một lúc nhìn thấy viền cam mới bấm. Bấm xong ô đạo hàm riêng, Nam bấm loạn xạ thêm 2 ô khác rồi bảo bị rối mắt.<br>• **Option C**: Lúc đầu Nam chỉ mải kéo slider xem chữ dài ngắn mà không hề để ý có nút câu hỏi trắc nghiệm nhỏ ở bên dưới. Mãi đến khi kéo kịch sang Mức 3, cuộn chuột xuống Nam mới reo lên: *“Ủa có quiz nè!”* và bấm làm thử. |
+| **Evidence được đọc hay bỏ qua**<br>*(Evidence Read / Ignored)* | • **Option A**: Nam đọc rất chăm chú thẻ kết luận của AI, mắt nhìn kỹ dòng *"Độ tin cậy: 88%"* và đọc hết sạch phần tóm tắt 1 phút trong khoảng 32 giây, vừa đọc vừa gật gù nhẹ.<br>• **Option B**: Nam đọc lướt rất nhanh phần lý thuyết Cấp 3 (gần như bỏ qua), nhưng lại dừng mắt rất lâu ở khung màu xanh ngọc: *"Mối liên hệ với bài học hiện tại"* để xem ký hiệu $\partial$ dính gì đến bài Gradient Descent.<br>• **Option C**: Nam dừng lại lâu nhất ở **Mức 2 (So sánh cũ/mới)**. Nam đọc đi đọc lại đoạn so sánh giữa đạo hàm $dy/dx$ hồi lớp 12 và $\partial L/\partial w$ của bài học này, bảo đoạn này viết đúng chỗ mình bị lú. |
+| **Cách tester sửa hoặc lấy lại control**<br>*(Recovery / Regain Control)* | • **Option A**: Khi thấy 2 nút ở dưới (`↺ Chẩn đoán lại` và `⚠️ AI đoán sai? Tôi tự chọn bài ôn`), Nam rê chuột qua nhưng không bấm, quay sang bảo Facilitator: *“Nó đoán đúng chỗ mình đang lú rồi nên mình không cần sửa nữa, đọc cái này là đủ hiểu rồi”*.<br>• **Option B**: Sau khi bấm thử 3 ô liên tiếp thấy giao diện hiển thị nhiều chữ chồng chéo, Nam bấm nút `↺ Đặt lại bản đồ` để xóa trắng lựa chọn và thở phào nhẹ nhõm. Nam cũng thử bấm nút `🔍 Đối chiếu ký hiệu trên công thức` và thích thú khi thấy công thức bên trái chớp viền xanh.<br>• **Option C**: Nam chủ động kéo thanh trượt từ 2 về 1 rồi đẩy lên 3 để so sánh độ dài giải thích. Sau khi làm xong câu quiz và được báo *"Chính xác!"*, Nam tự giác bấm nút đóng panel để quay lại đọc tiếp bài giảng chính. |
+| **Option được chọn** | **Nam chọn kết hợp: Ưu tiên Option C cho việc đọc bài hàng ngày, nhưng bắt buộc phải có Option A làm "phao cứu sinh" khi hoàn toàn bế tắc.** |
+| **Lý do và trade-off**<br>*(Reasons & Trade-offs)* | • **Lý do**: Option C tiện nhất vì nằm ngay tại chỗ, không che mất bài học, vừa nhìn công thức vừa đối chiếu được. Option A rất hay vì tự động "bắt bệnh", không bắt người học phải vắt óc nghĩ từ khóa để đi hỏi chatbot ngoài.<br>• **Trade-off chấp nhận**: Dùng Option C thì bắt buộc người học phải có chút trực giác để biết mình đang nghẽn ở ký hiệu nào để bấm; nếu mù tịt cả đoạn thì Option C vô dụng. Còn dùng Option A thì phải chấp nhận mất 45 giây trả lời câu hỏi và tạm đứt mạch đọc. |
+| **Evidence chống lại kỳ vọng của nhóm**<br>*(Negative Evidence)* | Ban đầu nhóm rất tự tin rằng **Option B (Bản đồ khái niệm Concept Radar)** sẽ được sinh viên IT như Nam mê nhất vì trông trực quan, công nghệ và bài bản. Nhưng thực tế Nam phản ứng ngược lại hoàn toàn:  
+*“Nhìn sơ đồ này lúc rảnh thì thấy hay, nhưng lúc mình đang bí bài tập gấp mà quăng cái cây này ra là mình tắt web luôn á, nhìn ngợp lắm!”*. Nam khẳng định bản đồ chỉ hợp để ôn thi cuối kỳ chứ không hợp lúc đang kẹt bài. |
 
 ---
 
-## 3. Phân tích 4 Lớp Chuyên Sâu
+## 3. Phân Tích 4 Lớp Chuyên Sâu (Sau buổi Test)
 
-### 1. OBSERVED (Tester đã làm hoặc nói gì?)
-* *Raw Quotes*:
-  * *"Ủa, nó hỏi đúng chỗ ghê. Bình thường mình nhìn công thức này chỉ thấy sợ chứ không biết là do mình quên cái trò giữ một biến làm hằng số từ hồi giải tích 1."* (Option A)
-  * *"Cái cây này nhìn tổng quan hay đấy, nhưng nếu mình là người mất gốc nặng thì mình không biết nên bấm cái nào trước nếu không có ô màu cam cảnh báo."* (Option B)
-  * *"Cái này tiện nhất ở chỗ mình không có cảm giác bị ngắt mạch đọc. Vừa nhìn công thức vừa chỉnh được độ sâu giải thích."* (Option C)
-* *Thao tác*: Tester dừng lại lâu nhất ở các phần so sánh giữa kiến thức cũ thời phổ thông và ký hiệu mới trong bài giảng Machine Learning.
+### 3.1. OBSERVED (Tester đã nói và làm gì? — Dữ liệu hành vi thô)
+* **Các câu nói nguyên văn (Raw Quotes)**:
+  * *Khi trải nghiệm Option A*:  
+    > *“Ủa hay nha, nó hỏi đúng tim đen luôn á! Bình thường nhìn ký hiệu $\partial$ cong cong này mình chỉ thấy sợ chứ không nhớ ra là do mình quên mất cái trò coi mấy biến khác là hằng số từ hồi giải tích 1.”*
+  * *Khi trải nghiệm Option B*:  
+    > *“Cái cây này nhìn thì tổng quan thật, nhưng thú thật là nếu không có cái ô màu cam cảnh báo thì mình chẳng biết bấm vào đâu trước. Nhìn nhiều nhánh quá thấy hơi áp lực.”*
+  * *Khi trải nghiệm Option C*:  
+    > *“Cái này là tiện nhất này! Vừa đọc bài vừa bấm thẳng vào ký hiệu xem giải thích nhanh được, không có cảm giác bị văng ra khỏi bài học hay phải mở tab mới.”*
+  * *Về câu trắc nghiệm mini ở Option C*:  
+    > *“Có cái câu hỏi 1 câu này hay nè, trả lời đúng cái là thấy tự tin hẳn, biết chắc là mình đã hiểu thật chứ không phải đọc vẹt.”*
+* **Thao tác vật lý ghi nhận**: Nam đọc lướt rất nhanh các định nghĩa dài dòng, nhưng sẽ khựng lại đọc từng từ một ở những chỗ có sự so sánh đối chiếu trực tiếp giữa *"Toán cấp 3"* và *"Toán đại học/Machine Learning"*.
 
-### 2. INTERPRETED (Nhóm nghĩ điều đó có thể có nghĩa gì?)
-* Học viên không hẳn là mất gốc toàn bộ môn toán, mà vấn đề cốt lõi là **không nhận ra toán cũ đang biến hình dưới ký hiệu mới**.
-* Nhu cầu cốt lõi khi đang đọc bài là **duy trì sự liền mạch**. Mọi hình thức mở pop-up to hoặc chuyển màn hình đều tạo ra cảm giác bị ngắt quãng và khiến người học nản lòng.
-* Tuy nhiên, khi học viên hoàn toàn "mù mờ" (không biết mình kẹt ở ký hiệu nào), tính năng inline của Option C bị tê liệt, và lúc đó câu hỏi gợi mở 2 bước của Option A trở thành chiếc phao cứu sinh.
+### 3.2. INTERPRETED (Nhóm diễn giải ma sát nhận thức của người học)
+1. **Bản chất của việc "quên kiến thức nền"**: Người học như Nam không hề mất gốc sạch giải tích, mà điểm nghẽn thực sự là **họ không nhận ra kiến thức phổ thông quen thuộc đang "biến hình" dưới dạng các ký hiệu chuyên ngành mới**. Họ chỉ cần một cây cầu nối trong 30 giây để kích hoạt lại ký ức cũ.
+2. **Nỗi sợ đứt gãy mạch đọc (Context Switching Friction)**: Khi đang học, não bộ người học đang tập trung theo dòng chảy của bài giảng. Việc phải mở một cửa sổ chat to đùng hay nhảy sang một trang sơ đồ lớn tạo ra ma sát tâm lý nặng nề, làm họ có cảm giác mình "kém cỏi" và đang phải học lại từ đầu. Đó là lý do Nam mê mẩn sự tiện lợi tại chỗ của Option C.
+3. **Giới hạn của sự tự do**: Option B cho người dùng toàn quyền tự do bấm, nhưng sự tự do đó biến thành gánh nặng nhận thức (*cognitive overload*) khi người học đang bối rối. Họ không muốn phải làm "thám tử" tự đi tìm vết nứt kiến thức trên bản đồ.
 
-### 3. DECIDED — NEXT CHANGE (Nhóm sẽ sửa, kết hợp hoặc test gì tiếp?)
-* **Hợp nhất cơ chế chẩn đoán của A vào giao diện inline của C**:
-  * Khi người học chọn một vùng công thức mà không rõ mình vướng ký hiệu nào, một nút nhỏ *"Chẩn đoán nhanh 2 câu"* sẽ xuất hiện ngay tại thanh công cụ inline của Option C thay vì mở khung chat riêng biệt.
-* **Tái định vị Option B**:
-  * Chuyển Bản đồ khái niệm (Concept Radar) thành tính năng hậu kỳ đặt ở cuối bài giảng phục vụ mục đích ôn tập tổng kết, thay vì hiển thị song song làm phân tâm người học.
-* **Mở rộng Micro-Check**:
-  * Giữ lại câu hỏi trắc nghiệm mini 1-click của Option C vì đây là điểm tạo ra sự tự tin lớn nhất cho học viên trước khi quay lại bài học chính.
+### 3.3. DECIDED — NEXT CHANGE (Quyết định cải tiến cụ thể của nhóm)
+Từ những phản ứng chân thật của Nam, nhóm quyết định không giữ nguyên vẹn một option đơn lẻ nào mà sẽ thực hiện tái cấu trúc:
+1. **Hợp nhất cơ chế chẩn đoán của Option A vào giao diện Inline của Option C**:
+   * Khi người học bôi đen hoặc chọn một vùng công thức trên bài giảng, thanh công cụ inline của Option C sẽ hiện ra.
+   * Nếu người học biết mình kẹt ở đâu $\rightarrow$ kéo slider xem giải thích tại chỗ.
+   * Nếu người học cảm thấy bế tắc hoàn toàn $\rightarrow$ bấm nút nhỏ *"Chẩn đoán nhanh 2 câu"* ngay trên thanh inline đó để AI gợi mở câu hỏi, không mở khung chat riêng biệt.
+2. **Tái định vị Option B (Concept Radar)**:
+   * Loại bỏ Bản đồ khái niệm khỏi vị trí cạnh bài đọc lúc đang học.
+   * Chuyển Concept Radar thành tính năng tổng kết đặt ở cuối bài học/cuối chương với tên gọi: *"Bản đồ mắt xích kiến thức đã học"* phục vụ ôn tập trước kỳ thi.
+3. **Nâng cấp tính năng Micro-Check**:
+   * Giữ lại câu hỏi trắc nghiệm mini 1-click của Option C và biến nó thành tính năng mặc định sau mỗi lần bóc tách kiến thức để học viên tự kiểm chứng độ hiểu bài.
 
-### 4. STILL UNPROVEN (Điều gì chưa thể kết luận từ một người?)
-* Chưa thể kết luận liệu câu trắc nghiệm mini 1 câu của Option C có đủ để đảm bảo học viên thực sự hiểu bản chất toán học lâu dài hay chỉ là giải pháp "chữa cháy" tạm thời.
-* Cần kiểm chứng trên các bài học không phải toán học (như kiến thức lập trình, cấu trúc dữ liệu) xem thanh trượt 3 mức độ sâu có còn phát huy tác dụng tương tự hay không.
+### 3.4. STILL UNPROVEN (Những điều chưa thể kết luận chỉ từ 1 buổi test)
+* **Khả năng duy trì kiến thức lâu dài**: Buổi test 25 phút mới chỉ chứng minh Nam vượt qua được điểm nghẽn tức thời và làm đúng câu trắc nghiệm ngay lúc đó. Nhóm chưa chứng minh được liệu 3 ngày sau Nam có còn nhớ cách tính đạo hàm riêng khi gặp lại công thức khác hay không.
+* **Độ bao phủ trên các dạng nội dung khác**: Bài test mới chỉ thực hiện trên một công thức toán cụ thể ($\frac{\partial L}{\partial w}$). Chưa thể kết luận thanh trượt 3 mức độ sâu của Option C có phát huy hiệu quả tương tự khi áp dụng vào các đoạn mã nguồn lập trình phức tạp (như code PyTorch/TensorFlow) hay không.
