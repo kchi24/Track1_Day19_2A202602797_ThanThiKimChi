@@ -1,7 +1,7 @@
 # Prototype Feedback Note
 
 > **Người thực hiện facilitate & ghi chép**: Facilitator (Mã học viên: 2A202602797)  
-> **Tester tham gia**: Nguyễn Hoàng Nam (22 tuổi, đang tự học chuyển hướng sang Product Management / Data Science, đang theo học khóa học về AI & Data Pipeline trên Coursera).  
+> **Tester tham gia**:  (22 tuổi, đang tự học chuyển hướng sang Product Management / Data Science, đang theo học khóa học về AI & Data Pipeline trên Coursera).  
 > **Thời gian & Địa điểm**: 15:30 – 15:55 (khoảng 25 phút), ngồi test trực tiếp 1-1 tại bàn tự học thư viện, quan sát qua laptop cá nhân.  
 > **Kỷ luật buổi test**: Tester tự cầm chuột thao tác từ đầu đến cuối; Facilitator chỉ ngồi cạnh quan sát cử chỉ, bấm giờ và ghi lại nguyên văn câu nói/hành vi, tuyệt đối không cầm chuột hay chỉ tay giải thích hộ giao diện.
 
