@@ -3,7 +3,7 @@
 > **Dự án**: AI Tutor — Diagnostic Refresher (Khám phá Solution Space & Thử nghiệm Micro-Prototypes Human–AI)  
 > **Mã học viên**: 2A202602797  
 > **Case nghiên cứu**: Case A — AI Tutor: Diagnostic Refresher (Tiếp nối trực tiếp từ Day 17)  
-> **Phân công cá nhân**: Chịu trách nhiệm chính **Option A (Socratic Diagnostic Chat)**; đồng thời tham gia thiết kế chung, chuẩn hóa prototype A/B/C và trực tiếp facilitate thử nghiệm với 1 tester ngoài nhóm.
+> **Phân công cá nhân**: Chịu trách nhiệm chính **Option B (Prerequisite Concept Radar)**; đồng thời tham gia thiết kế khung dùng chung 70% context, chuẩn hóa prototype A/B/C và trực tiếp facilitate thử nghiệm với 1 tester ngoài nhóm.
 
 ---
 
@@ -13,13 +13,10 @@
 Track1_Day19_2A202602797_ThanThiKimChi/
 ├── README.md                      # Báo cáo tổng quan toàn bộ 6 chặng của bài lab
 ├── three-option-design-sheet.md   # Bảng thiết kế chi tiết 3 Option (Comparison Contract & Human–AI Decision Table)
-├── prototype-link.md              # Hướng dẫn chạy và link bộ micro-prototype A/B/C
+├── prototype-link.md              # Link bộ micro-prototype A/B/C trực tuyến
 ├── prototype-feedback-note.md     # Phiên test do chính tác giả facilitate với Tester ngoài nhóm
 ├── group-feedback-synthesis.md    # Tổng hợp 3 Feedback Notes của nhóm & 1 Group Next Change
-├── ai-support-log.md              # Khai báo minh bạch việc sử dụng công cụ AI
-├── index.html                     # Mã nguồn Web Micro-prototype chung 70% context cho A/B/C
-├── style.css                      # Giao diện styling cho Micro-prototype
-└── app.js                         # Logic tương tác của cả 3 cơ chế Human–AI
+└── ai-support-log.md              # Khai báo minh bạch việc sử dụng công cụ AI
 ```
 
 ---
@@ -45,6 +42,8 @@ Nhóm đặt 3 Practice Notes cạnh nhau để tách biệt rõ giữa lời n�
 #### 2. Chốt Hypothesis Problem (Chuẩn cấu trúc 5 thành tố)
 > **Khi** đang tự học một bài học hoặc khái niệm chuyên sâu mới, **học viên tự học trực tuyến** gặp khó khăn trong việc **nhanh chóng gỡ điểm nghẽn cục bộ để duy trì mạch bài học** vì **không tự cô lập được phần kiến thức nền tảng nào đang bị thiếu (và ngại bị quá tải nếu phải ôn lại toàn bộ, cũng như tốn quá nhiều công sức giải thích bối cảnh cho các công cụ tra cứu bên ngoài)**, dẫn đến **mất nhiều thời gian loay hoay lọc thông tin, phát sinh cảm giác mệt mỏi, áp lực tiến độ và dễ nản lòng bỏ dở khóa học**.
 
+---
+
 ### Chặng 2 — Chọn ba Solution Options (20 phút)
 
 #### 1. Mở lại Solution Parking Lot (từ Day 17)
@@ -67,11 +66,11 @@ Nhóm đọc lại 5 hướng đã park ở Day 17 và kế thừa trực tiếp
 | **Content/data fixture** | Bài giảng: *"Thuật toán Gradient Descent & Chain Rule"*. Điểm kẹt: Công thức $w_{new} = w_{old} - \eta \cdot \frac{\partial L}{\partial w}$. |
 
 **Những thứ ĐƯỢC PHÉP KHÁC (Solution Mechanisms):**
-| Thành phần | Option A<br>**Socratic Diagnostic Chat** | Option B<br>**Prerequisite Concept Radar** | Option C<br>**Inline Scaffolding Co-pilot** |
+| Thành phần | Option A<br>**Socratic Diagnostic Chat** | Option B *(Cá nhân phụ trách)*<br>**Prerequisite Concept Radar** | Option C<br>**Inline Scaffolding Co-pilot** |
 | :--- | :--- | :--- | :--- |
 | **Solution mechanism** | **Turn-based Socratic Interview**: AI chủ động hỏi 2 câu ngắn để chẩn đoán và tóm tắt cấp tốc. | **Visual Map Exploration**: Hệ thống trực quan hóa cây phả hệ kiến thức; User tự nhìn bản đồ để định vị chỗ kẹt. | **Inline Deconstruction**: Bóc tách tức thì tại chỗ công thức thành các tầng kiến thức ngầm định qua thanh trượt. |
-| **User làm gì?** | Bấm *"Tôi chưa hiểu"* $\rightarrow$ Chọn đáp án cho 2 câu hỏi $\rightarrow$ Đọc kết luận. | Duyệt cây kiến thức $\rightarrow$ Bấm vào node nghi ngờ $\rightarrow$ Đọc đối chiếu lý thuyết cũ/mới. | Bấm vào ký hiệu công thức gây bế tắc $\rightarrow$ Kéo thanh trượt độ sâu (1, 2, 3) $\rightarrow$ Làm thử câu test mini. |
-| **AI làm gì?** | Phân tích câu trả lời, suy luận xác suất lỗ hổng (88%) và sinh thẻ ôn tập cấp tốc. | Phân loại độ rủi ro của các node (*Nền tảng* vs *Vùng dễ nhầm lẫn ⚠️*) và hiển thị giải thích liên hệ. | Phân giải cấu trúc ký hiệu toán học theo thời gian thực tương ứng với mức độ sâu người dùng chọn. |
+| **User làm gì?** | Bấm *"Tôi chưa hiểu"* $\rightarrow$ Chọn đáp án cho 2 câu hỏi $\rightarrow$ Đọc kết luận. | Duyệt cây kiến thức (hoặc danh sách phẳng) $\rightarrow$ Bấm vào node nghi ngờ $\rightarrow$ Đọc đối chiếu lý thuyết cũ/mới. | Bấm vào ký hiệu công thức gây bế tắc $\rightarrow$ Kéo thanh trượt độ sâu (1, 2, 3) $\rightarrow$ Làm thử câu test mini. |
+| **AI làm gì?** | Phân tích câu trả lời, suy luận xác suất lỗ hổng (88%) và sinh thẻ ôn tập cấp tốc. | Phân loại độ rủi ro của các node (*Nền tảng* vs *Vùng dễ nhầm lẫn 85% ⚠️*) và hiển thị giải thích liên hệ. | Phân giải cấu trúc ký hiệu toán học theo thời gian thực tương ứng với mức độ sâu người dùng chọn. |
 | **Trigger** | Nút *"Tôi chưa hiểu đoạn này"* bên cạnh công thức. | Tab/Menu *"Bản đồ kiến thức tiên quyết"* ở cạnh bài. | Thao tác bấm/chọn trực tiếp vào các ký hiệu của công thức ($\partial$, $\eta$, $-$). |
 | **Trade-off chính** | Được dẫn dắt chính xác, nhưng phải nhường quyền điều khiển cho AI và tạm tách khỏi bài đọc. | Có bức tranh tổng quan, nhưng đòi hỏi nỗ lực nhận thức cao (dễ ngợp nếu không biết bấm node nào). | Giữ mạch đọc hoàn hảo, nhưng giả định user đã khoanh vùng được ký hiệu nào gây bối rối. |
 
@@ -92,11 +91,13 @@ User tự duyệt bản đồ    ──►    User chọn độ sâu phân rã  
 - [x] Khác nhau rõ rệt ở cơ chế tương tác và mức độ phân chia quyền tự quyết giữa User và AI.
 - [x] Không có option nào là "vật tế thần" (cả 3 đều chạy test-ready trên micro-prototype).
 
+---
+
 ### Chặng 3 — Human–AI Design Pass (30 phút)
 
 Nhóm chi tiết hóa 4 trụ cột tương tác cho cả 3 Option trong **Human–AI Decision Table**:
 
-| Human–AI decision | Option A<br>**Socratic Diagnostic Chat** | Option B<br>**Prerequisite Concept Radar** | Option C<br>**Inline Scaffolding Co-pilot** |
+| Human–AI decision | Option A<br>**Socratic Diagnostic Chat** | Option B *(Cá nhân phụ trách)*<br>**Prerequisite Concept Radar** | Option C<br>**Inline Scaffolding Co-pilot** |
 | :--- | :--- | :--- | :--- |
 | **User làm gì? AI làm gì?** | • **User**: Bấm *"Tôi chưa hiểu"* $\rightarrow$ Chọn đáp án cho 2 câu hỏi $\rightarrow$ Đọc kết quả chẩn đoán và bài ôn 1 phút.<br>• **AI**: Đặt 2 câu hỏi gợi mở $\rightarrow$ Phân tích lựa chọn $\rightarrow$ Sinh thẻ ôn tập cấp tốc đúng lỗ hổng phát hiện. | • **User**: Duyệt cây phả hệ kiến thức $\rightarrow$ Bấm vào node nghi ngờ $\rightarrow$ Đọc thẻ đối chiếu.<br>• **AI**: Trực quan hóa cấu trúc tiên quyết $\rightarrow$ Hiển thị tóm tắt và liên hệ với bài mới khi được click. | • **User**: Bấm vào ký hiệu công thức gây bế tắc $\rightarrow$ Kéo thanh trượt điều chỉnh độ sâu (Mức 1, 2, 3).<br>• **AI**: Bóc tách cấu trúc công thức tức thời $\rightarrow$ Sinh nội dung giải phẫu tương ứng với độ sâu được chọn. |
 | **AI Act / Ask / Don't Act? Vì sao?** | **Ask $\rightarrow$ Act**:<br>AI chọn **Ask** (hỏi 2 câu) trước để xác định chính xác chỗ nghẽn, sau đó mới **Act** (sinh bài ôn tập). Vì nếu Act ngay (tự giải thích dài dòng) sẽ gây quá tải nhận thức như phản ánh ở Note 1 & Note 3. | **Don't Act (trừ khi User yêu cầu)**:<br>AI giữ trạng thái tĩnh, chờ đợi người dùng click. Vì User cần không gian tự do định vị lỗ hổng (metacognition) mà không bị AI can thiệp làm phiền. | **Act on Request (Co-pilot)**:<br>AI phản ứng tức thì theo từng thao tác kéo trượt của User. Vì User muốn kiểm soát độ sâu bóc tách trực tiếp tại chỗ mà không bị gián đoạn mạch đọc. |
@@ -126,13 +127,13 @@ RESULT / USER DECISION (Kết quả gỡ kẹt & Quyền tự quyết / Recovery
   * *Task & Desired outcome*: Tìm ra phần kiến thức nền tảng đang thiếu hụt và gỡ kẹt trong dưới 1 phút.
 * **30% khác biệt ở Critical Interaction**:
   * **Option A**: Nút *"Tôi chưa hiểu đoạn này"* kích hoạt Socratic Diagnostic Chat 2 bước.
-  * **Option B (Cá nhân phụ trách)**: Bản đồ Concept Radar trực quan hóa các mắt xích kiến thức (Cấp 3 $\rightarrow$ Đại học) kèm chế độ Danh sách phẳng.
+  * **Option B *(Cá nhân phụ trách)*: Bản đồ Concept Radar trực quan hóa các mắt xích kiến thức (Cấp 3 $\rightarrow$ Đại học) kèm chế độ Danh sách phẳng.
   * **Option C**: Inline Scaffolding bóc tách công thức tại chỗ với thanh trượt 3 mức độ sâu.
 
 ---
 
 #### 2. Definition of Testable (Tiêu chí sẵn sàng kiểm thử)
-- [x] **Tự chủ tác vụ**: Tester có thể tự mở link trực tuyến **[Claude Artifact](https://claude.ai/artifact/MH8uWoTmFY2CAVkGv67vmv)** hoặc file cục bộ [`index.html`](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/index.html) và tự do thao tác trên cả 3 option mà không cần cài đặt.
+- [x] **Tự chủ tác vụ**: Tester có thể tự mở link trực tuyến hoặc file cục bộ [`index.html`](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/index.html) và tự do thao tác trên cả 3 option mà không cần cài đặt.
 - [x] **Khởi đầu nhất quán**: Cả 3 option đều bắt đầu từ cùng một bài giảng và công thức toán thực tế.
 - [x] **Tự giải thích (Self-explanatory)**: Giao diện và các nút bấm rõ ràng, không cần facilitator dẫn dắt hay thuyết minh hộ.
 - [x] **Dữ liệu thật (Realistic Canned Output)**: Kiến thức toán học, câu hỏi chẩn đoán và nội dung ôn tập chính xác về mặt giải tích, đủ thật để tester ra quyết định.
@@ -180,7 +181,7 @@ RESULT / USER DECISION (Kết quả gỡ kẹt & Quyền tự quyết / Recovery
 ---
 
 #### GATE 4 — Test-ready Confirmation:
-- [x] Một người ngoài nhóm có thể mở link trực tuyến **[Claude Artifact](https://claude.ai/artifact/MH8uWoTmFY2CAVkGv67vmv)** hoặc file cục bộ [`index.html`](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/index.html), thực hiện trọn vẹn task trên cả A/B/C và quay về bài học ban đầu mà không cần ai giải thích hộ.
+- [x] Một người ngoài nhóm có thể mở link trực tuyến trong [`prototype-link.md`](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/prototype-link.md) hoặc file cục bộ [`index.html`](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/index.html), thực hiện trọn vẹn task trên cả A/B/C và quay về bài học ban đầu mà không cần ai giải thích hộ.
 
 ---
 
@@ -231,44 +232,7 @@ Tuân thủ nghiêm ngặt quy định: **Không tuyên bố solution đã valid
    * **Soạn thảo Prototype Annotation chuẩn cho Option B**: Xác lập rõ kỳ vọng hành vi, các điểm cần quan sát và nguyên tắc không giải thích hộ cho Facilitator.
 3. **Phối hợp phát triển Micro-Prototype dùng chung 70% Context**:
    * Cùng nhóm chuẩn hóa layout 2 cột cố định bài học Machine Learning và công thức cập nhật trọng số Gradient Descent $w_{new} = w_{old} - \eta \cdot \frac{\partial L}{\partial w}$.
-   * Triển khai bộ prototype lên nền tảng trực tuyến tại: **[https://claude.ai/artifact/MH8uWoTmFY2CAVkGv67vmv](https://claude.ai/artifact/MH8uWoTmFY2CAVkGv67vmv)** và kiểm tra tính tương thích ngoại tuyến với [`index.html`](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/index.html).
+   * Triển khai bộ prototype lên nền tảng trực tuyến (ghi nhận trong [`prototype-link.md`](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/prototype-link.md)) và kiểm tra tính tương thích ngoại tuyến với [`index.html`](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/index.html).
 4. **Kiểm thử chéo & Tổng hợp phản hồi (Chặng 6)**:
    * Trực tiếp thực hiện kiểm thử chéo ở phút 65–75 (trải nghiệm thử Option A và C do các bạn khác build).
-   * Điều phối phiên test với Tester 1, quan sát cách người dùng tương tác với Option B do mình thiết kế, ghi nhận đánh đổi thực tế (người dùng thích cái nhìn tổng quan nhưng bị quá tải nhận thức khi đang cần làm bài gấp) và đề xuất chuyển Option B thành tính năng ôn tập hậu kỳ trong *Group Next Change*. 1. *Thao tác đầu tiên*: Người dùng click vào đâu trước tiên khi nhìn thấy công thức?
-  2. *Điểm ngập ngừng / Bối rối*: Họ có đọc câu hỏi chẩn đoán không? Có bị ngợp trước cây sơ đồ không? Có tìm thấy thanh trượt không?
-  3. *Mức độ kiên nhẫn*: Họ dành bao nhiêu giây để đọc nội dung giải thích của AI?
-  4. *Phản xạ phục hồi (Recovery)*: Khi AI đưa ra kết quả, họ bấm tiếp tục hay tìm cách sửa?
-  5. *Đánh đổi*: Họ thích sự nhanh gọn (Inline) hay thích được định hướng từng bước (Socratic)?
-
----
-
-### Chặng 6 — Kiểm thử chéo & Tổng hợp Next Change (20 phút)
-
-#### 1. Ma trận đối chiếu 3 Tester độc lập
-| Tester / Facilitator | Option A (Socratic Chat) | Option B (Concept Radar) | Option C (Inline Scaffolding) | Đánh đổi & Xu hướng lựa chọn |
-| :--- | :--- | :--- | :--- | :--- |
-| **Tester 1**<br>*(Thành viên 1 facilitate)*<br>SV CNTT năm 3 | Thao tác 45s; trả lời nhanh 2 câu hỏi; rất thích việc AI "bắt đúng bệnh" không cần gõ từ khóa. | Chú ý ngay vào nút cam cảnh báo; nhận xét cây sơ đồ hơi nhiều chữ lúc đang bị rối. | Kéo thanh trượt qua cả 3 mức; thích nhất Mức 2 (So sánh cũ/mới); làm mini-quiz và rất hào hứng khi đúng. | **Chọn C cho việc học hàng ngày**, nhưng **chọn A khi hoàn toàn bế tắc**. Đánh đổi giữa việc *"giữ mạch đọc"* (C) và *"được định hướng khi mất gốc"* (A). |
-| **Tester 2**<br>*(Thành viên 2 facilitate)*<br>Chuyển ngành Data | Bấm chat ngay; AI điều chỉnh câu hỏi tốt; nhẹ nhõm vì không phải tự tìm tài liệu cũ. | Đọc kỹ đối chiếu lý thuyết; khen bản đồ giúp hiểu logic bài, nhưng lúc làm bài tập gấp thì không đủ kiên nhẫn đọc. | Thử bấm từng ký hiệu; nhận xét Mức 2 là vừa vặn nhất; thích inline vì không che bài giảng. | **Thích kết hợp A và C**. Nhận xét Option B phù hợp để review trước kỳ thi hơn là lúc đang kẹt bài. |
-| **Tester 3**<br>*(Thành viên 3 facilitate)*<br>Học viên Python online | Ban đầu sợ bị AI "dạy đời" bài dài; sau khi thấy chỉ có 2 câu trắc nghiệm ngắn thì hoàn thành rất nhanh. | Lúng túng trước các mũi tên sơ đồ; bấm nhầm sang nhánh khác trước khi thấy nút đạo hàm riêng. | Thích việc chọn thẳng vào ký hiệu $\partial$; kéo Mức 2 xem giải thích rồi đóng lại đọc bài ngay. | **Chọn C là giải pháp tiện nhất**. Không muốn mở cửa sổ chat phụ vì cảm giác như bị gián đoạn và thừa nhận mình "kém cỏi". |
-
-#### 2. Group Next Change Statement (Tuyên bố cải tiến nhóm)
-Tuân thủ nghiêm ngặt quy định: **Không tuyên bố solution đã validated**, nhóm đúc kết tuyên bố lặp chuẩn mực:
-
-> **“Với Hypothesis Problem này (học viên bế tắc cục bộ, ngại quá tải khi ôn lại cả bài và tốn công giải thích bối cảnh cho AI ngoài), chúng tôi đã thử ba cách giải (A, B, C).**  
-> **Tester đã có xu hướng ưu tiên sự liền mạch của Option C (Inline Scaffolding) để không làm đứt gãy dòng đọc bài, nhưng vẫn cần cơ chế gợi mở và khoanh vùng lỗ hổng tự động của Option A khi hoàn toàn bế tắc.**  
->  
-> **Vì vậy, ở iteration tiếp theo, chúng tôi sẽ:**  
-> 1. **Hợp nhất cơ chế chẩn đoán nhanh của Option A trực tiếp vào thanh công cụ Inline của Option C**: Khi người dùng bôi đen một vùng công thức mà không rõ mình vướng ký hiệu nào, một nút nhỏ *"Chẩn đoán nhanh 2 câu"* sẽ xuất hiện ngay tại chỗ thay vì mở khung chat riêng biệt.  
-> 2. **Chuyển Option B (Bản đồ khái niệm) thành tính năng hậu kỳ**: Đặt Bản đồ kiến thức ở cuối bài học dưới dạng *"Tóm tắt các mắt xích đã học"* phục vụ ôn tập, thay vì hiển thị song song gây nhiễu lúc đang đọc bài.  
-> 3. **Bổ sung tính năng Kiểm tra củng cố (Micro-Check)**: Mở rộng tính năng câu hỏi trắc nghiệm mini 1-click sau mỗi lần bóc tách kiến thức để người học tự tin rằng mình đã thực sự hiểu trước khi quay lại bài giảng chính.”
-
----
-
-## 3. Đóng góp cá nhân
-
-1. **Khởi tạo và bảo vệ Hypothesis Problem**: Dẫn dắt Chặng 1 dựa trên dữ liệu phỏng vấn sâu Day 17.
-2. **Chịu trách nhiệm chính Option A (Socratic Diagnostic Chat)**:
-   * Thiết kế luồng câu hỏi chẩn đoán 2 bước, thuật toán phát hiện lỗ hổng và thẻ tóm tắt cấp tốc (Mini-refresher).
-   * Thiết kế cơ chế phục hồi quyền kiểm soát: Nút *"Chẩn đoán lại"* và *"AI đoán sai? Tôi tự chọn bài ôn"* (User Override).
-3. **Hiện thực hóa mã nguồn Micro-prototype**: Xây dựng khung web dùng chung 70% context cho cả 3 thành viên thử nghiệm.
-4. **Facilitate buổi test với Tester 1**: Trực tiếp điều phối, quan sát và ghi lại trung thực toàn bộ hành vi, phản ứng và đánh đổi của Tester 1 trong `prototype-feedback-note.md`.
+   * Điều phối phiên test với Tester 1, quan sát cách người dùng tương tác với Option B do mình thiết kế, ghi nhận đánh đổi thực tế (người dùng thích cái nhìn tổng quan nhưng bị quá tải nhận thức khi đang cần làm bài gấp) và đề xuất chuyển Option B thành tính năng ôn tập hậu kỳ trong *Group Next Change*.
