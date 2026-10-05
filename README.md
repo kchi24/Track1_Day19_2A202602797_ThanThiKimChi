@@ -222,12 +222,14 @@ RESULT / USER DECISION (Kết quả gỡ kẹt & Quyền tự quyết / Recovery
 
 ### Chặng 6 — Kiểm thử chéo & Tổng hợp Next Change (20 phút)
 
-#### 1. Ma trận đối chiếu 3 Tester độc lập
-| Tester / Facilitator | Option A (Socratic Chat) | Option B (Concept Radar) | Option C (Inline Scaffolding) | Đánh đổi & Xu hướng lựa chọn |
+#### 1. Ma trận Tổng hợp 3 Feedback Notes của Nhóm
+| Nội dung | Feedback 1<br>*(Tester 1: SV CNTT năm 3)* | Feedback 2<br>*(Tester 2: Chuyển ngành Data)* | Feedback 3<br>*(Tester 3: Học viên Python online)* | Pattern hoặc khác biệt |
 | :--- | :--- | :--- | :--- | :--- |
-| **Tester 1**<br>*(Thành viên 1 facilitate)*<br>SV CNTT năm 3 | Thao tác 45s; trả lời nhanh 2 câu hỏi; rất thích việc AI "bắt đúng bệnh" không cần gõ từ khóa. | Chú ý ngay vào nút cam cảnh báo; nhận xét cây sơ đồ hơi nhiều chữ lúc đang bị rối; bấm nút đối chiếu công thức thấy trực quan. | Kéo thanh trượt qua cả 3 mức; thích nhất Mức 2 (So sánh cũ/mới); làm mini-quiz và rất hào hứng khi đúng. | **Chọn C cho việc học hàng ngày**, nhưng **chọn A khi hoàn toàn bế tắc**. Đánh đổi giữa việc *"giữ mạch đọc"* (C) và *"được định hướng khi mất gốc"* (A). |
-| **Tester 2**<br>*(Thành viên 2 facilitate)*<br>Chuyển ngành Data | Bấm chat ngay; AI điều chỉnh câu hỏi tốt; nhẹ nhõm vì không phải tự tìm tài liệu cũ. | Đọc kỹ đối chiếu lý thuyết; khen bản đồ giúp hiểu logic bài, nhưng lúc làm bài tập gấp thì không đủ kiên nhẫn đọc. | Thử bấm từng ký hiệu; nhận xét Mức 2 là vừa vặn nhất; thích inline vì không che bài giảng. | **Thích kết hợp A và C**. Nhận xét: Option B phù hợp để review trước kỳ thi hơn là lúc đang kẹt bài. |
-| **Tester 3**<br>*(Thành viên 3 facilitate)*<br>Học viên Python online | Ban đầu sợ bị AI "dạy đời" bài dài; sau khi thấy chỉ có 2 câu trắc nghiệm ngắn thì hoàn thành rất nhanh. | Lúng túng trước các mũi tên sơ đồ; sau khi chuyển sang xem dạng danh sách phẳng thì định vị được nút đạo hàm riêng nhanh hơn. | Thích việc chọn thẳng vào ký hiệu $\partial$; kéo Mức 2 xem giải thích rồi đóng lại đọc bài ngay. | **Chọn C là giải pháp tiện nhất**. Không muốn mở cửa sổ chat phụ vì cảm giác như bị gián đoạn và thừa nhận mình "kém cỏi". |
+| **First action** | Nhìn lướt công thức 15s $\rightarrow$ Bấm nút chẩn đoán ở Option A; ở Option B bấm ngay vào nút cam cảnh báo. | Bấm vào nút chat ngay khi thấy công thức dài; ở Option C bấm trực tiếp vào ký hiệu $\partial$ đầu tiên. | Dừng lại đọc bài 30s trước khi bấm; ở Option C thử kéo ngay thanh trượt sang Mức 2. | **Pattern**: Cả 3 tester đều phản xạ bấm vào các điểm có gợi ý thị giác mạnh nhất (nút cam cảnh báo, ký hiệu lạ) thay vì đọc tuần tự. |
+| **Breakdown chính** | Bị ngợp trước các mũi tên sơ đồ của Option B nếu không có nút cảnh báo màu cam; phân vân ở câu hỏi 2 của Option A. | Thừa nhận không đủ kiên nhẫn đọc sơ đồ Option B khi đang làm bài tập gấp; nhận xét Option C Mức 3 hơi dài. | Lúng túng bấm nhầm nhánh không liên quan ở Option B; ban đầu sợ bị AI "dạy đời" bài dài ở Option A. | **Pattern**: Option B gây ra **Breakdown nhận thức lớn nhất** (quá tải thông tin, ngợp trước cây phả hệ khi đang cần gỡ kẹt nhanh trong 1 phút). |
+| **Cách lấy lại control** | Thử nút `↺ Đặt lại bản đồ` ở B; kéo thanh trượt qua lại giữa Mức 1 $\leftrightarrow$ 2 $\leftrightarrow$ 3 ở C; làm câu quiz để tự kiểm tra. | Sử dụng nút `Trở về mặc định` ở C để quay lại bài đọc; không bấm nút override của A vì thấy AI đoán trúng. | Chuyển sang xem danh sách phẳng ở B; kéo Mức 2 ở C rồi đóng panel để tiếp tục đọc bài. | **Pattern**: Tester chủ động dùng các cơ chế phục hồi (slider, nút reset, đóng panel) để bảo toàn nhịp học cá nhân. |
+| **Option được chọn** | **Option C (cho học hàng ngày)** kết hợp **Option A (khi hoàn toàn bế tắc)**. | **Option C** kết hợp **Option A**. | **Option C** (tiện nhất, không muốn mở cửa sổ chat phụ). | **Pattern**: **100% Tester ưu tiên Option C** vì tính liền mạch, nhưng đều thừa nhận **vẫn cần Option A** làm phao cứu sinh khi mất gốc hoàn toàn. |
+| **Trade-off** | Đánh đổi giữa việc *"giữ mạch đọc tại chỗ"* (C) và *"được dẫn dắt khi không biết mình hổng cái gì"* (A). | Đánh đổi giữa tốc độ tra cứu tức thời trong 30s (C) và bức tranh phả hệ tổng thể nhưng tốn thời gian đọc (B). | Đánh đổi giữa cảm giác tự chủ không bị AI can thiệp (C) và việc phải tự mò ký hiệu gây nghẽn. | **Pattern**: Đánh đổi cốt lõi là **Mạch đọc liền mạch (Continuity)** đối đầu với **Độ sâu chẩn đoán (Diagnostic Depth)**. |
 
 #### 2. Group Next Change Statement (Tuyên bố cải tiến nhóm)
 Tuân thủ nghiêm ngặt quy định: **Không tuyên bố solution đã validated**, nhóm đúc kết tuyên bố lặp chuẩn mực:
@@ -239,6 +241,15 @@ Tuân thủ nghiêm ngặt quy định: **Không tuyên bố solution đã valid
 > 1. **Hợp nhất cơ chế chẩn đoán nhanh của Option A trực tiếp vào thanh công cụ Inline của Option C**: Khi người dùng bôi đen một vùng công thức mà không rõ mình vướng ký hiệu nào, một nút nhỏ *"Chẩn đoán nhanh 2 câu"* sẽ xuất hiện ngay tại chỗ thay vì mở khung chat riêng biệt.  
 > 2. **Chuyển Option B (Bản đồ khái niệm) thành tính năng hậu kỳ**: Đặt Bản đồ kiến thức ở cuối bài học dưới dạng *"Tóm tắt các mắt xích đã học"* phục vụ ôn tập, thay vì hiển thị song song gây nhiễu lúc đang đọc bài.  
 > 3. **Bổ sung tính năng Kiểm tra củng cố (Micro-Check)**: Mở rộng tính năng câu hỏi trắc nghiệm mini 1-click sau mỗi lần bóc tách kiến thức để người học tự tin rằng mình đã thực sự hiểu trước khi quay lại bài giảng chính.”
+
+* **Evidence dẫn tới quyết định này**: Cả 3 Tester đều ưu tiên Option C vì không ngắt mạch đọc nhưng đều thừa nhận điểm mù khi không biết mình kẹt ở đâu; Option B gây ngợp khi đang đọc dở nhưng phù hợp để tổng kết.
+* **Still Unproven**: Chưa thể kết luận học viên có thực sự nhớ lâu hơn và tự giải bài tập mới được hay không nếu chỉ thử nghiệm trong 25 phút.
+
+#### GATE 5 — Learning, not Praise Confirmation:
+- [x] Nhóm có đủ 3 Feedback Notes độc lập từ 3 tester khác nhau ngoài nhóm.
+- [x] Chỉ ra được các Pattern hành vi và sự đánh đổi (Trade-off) cụ thể, không dùng lời khen cảm tính.
+- [x] Chốt một Group Next Change rõ ràng, có căn cứ từ bằng chứng thực tế.
+- [x] Nêu rõ điều vẫn chưa được chứng minh (Still Unproven).
 
 ---
 
