@@ -155,8 +155,37 @@ function renderDiagnosisResult() {
   document.getElementById('opt-a-status').textContent = 'Trạng thái: Đã hoàn tất chẩn đoán';
 }
 
+let toastTimer;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.remove('hidden');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.add('hidden'), 2800);
+}
+
+function flashLessonFormula() {
+  const card = document.getElementById('target-formula-card');
+  card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  card.classList.add('flash');
+  setTimeout(() => card.classList.remove('flash'), 1600);
+}
+
+// Recovery path shared by A/B/C: user is done and goes back to the lesson.
 function returnToLesson() {
-  alert('Tuyệt vời! Bạn đã thông suốt lỗ hổng kiến thức và có thể tự tin tiếp tục mạch bài học.');
+  showToast('Bạn đã thông suốt điểm kẹt. Tiếp tục mạch bài học nhé!');
+  flashLessonFormula();
+}
+
+// Reset path: clear every option's state and return to the common context.
+function resetAll() {
+  resetOptionA();
+  switchRadarMode('tree');
+  resetRadar();
+  resetScaffold();
+  switchOption('A');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  showToast('Đã đặt lại: quay về bài học ban đầu.');
 }
 
 function resetOptionA() {
@@ -215,12 +244,14 @@ const conceptDatabase = {
 };
 
 function selectNode(nodeId) {
-  document.querySelectorAll('.node-card').forEach(n => n.classList.remove('selected'));
+  document.querySelectorAll('.node-card, .list-item-card').forEach(n => n.classList.remove('selected'));
+  
   const targetNode = document.getElementById(`node-${nodeId}`);
   if (targetNode) targetNode.classList.add('selected');
 
   const data = conceptDatabase[nodeId];
   const detailBox = document.getElementById('concept-detail-box');
+  if (!data || !detailBox) return;
   
   detailBox.innerHTML = `
     <div style="margin-bottom: 8px;">
@@ -234,8 +265,40 @@ function selectNode(nodeId) {
   `;
 }
 
+function switchRadarMode(mode) {
+  const treeView = document.getElementById('radar-tree-view');
+  const listView = document.getElementById('radar-list-view');
+  const btnTree = document.getElementById('btn-mode-tree');
+  const btnList = document.getElementById('btn-mode-list');
+
+  if (mode === 'tree') {
+    treeView.classList.remove('hidden');
+    listView.classList.add('hidden');
+    btnTree.classList.add('active');
+    btnList.classList.remove('active');
+  } else {
+    treeView.classList.add('hidden');
+    listView.classList.remove('hidden');
+    btnTree.classList.remove('active');
+    btnList.classList.add('active');
+  }
+}
+
+function highlightFormulaFromRadar() {
+  const formulaBox = document.querySelector('.formula-display');
+  if (formulaBox) {
+    formulaBox.style.outline = '2px solid #06b6d4';
+    formulaBox.style.boxShadow = '0 0 20px rgba(6, 182, 212, 0.6)';
+    formulaBox.style.transition = 'all 0.3s ease';
+    setTimeout(() => {
+      formulaBox.style.outline = 'none';
+      formulaBox.style.boxShadow = 'none';
+    }, 1500);
+  }
+}
+
 function resetRadar() {
-  document.querySelectorAll('.node-card').forEach(n => n.classList.remove('selected'));
+  document.querySelectorAll('.node-card, .list-item-card').forEach(n => n.classList.remove('selected'));
   document.getElementById('concept-detail-box').innerHTML = `
     <div class="detail-placeholder">👈 Chọn một khái niệm trên bản đồ để xem AI phân tích đối chiếu.</div>
   `;

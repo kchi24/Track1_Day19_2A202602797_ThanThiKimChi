@@ -126,17 +126,17 @@ RESULT / USER DECISION (Kết quả gỡ kẹt & Quyền tự quyết / Recovery
   * *Task & Desired outcome*: Tìm ra phần kiến thức nền tảng đang thiếu hụt và gỡ kẹt trong dưới 1 phút.
 * **30% khác biệt ở Critical Interaction**:
   * **Option A**: Nút *"Tôi chưa hiểu đoạn này"* kích hoạt Socratic Diagnostic Chat 2 bước.
-  * **Option B**: Bản đồ Concept Radar trực quan hóa các mắt xích kiến thức (Cấp 3 $\rightarrow$ Đại học).
+  * **Option B (Cá nhân phụ trách)**: Bản đồ Concept Radar trực quan hóa các mắt xích kiến thức (Cấp 3 $\rightarrow$ Đại học) kèm chế độ Danh sách phẳng.
   * **Option C**: Inline Scaffolding bóc tách công thức tại chỗ với thanh trượt 3 mức độ sâu.
 
 ---
 
 #### 2. Definition of Testable (Tiêu chí sẵn sàng kiểm thử)
-- [x] **Tự chủ tác vụ**: Tester có thể tự mở file [`index.html`](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/index.html) và tự do thao tác trên cả 3 option mà không cần cài đặt.
+- [x] **Tự chủ tác vụ**: Tester có thể tự mở link trực tuyến **[Claude Artifact](https://claude.ai/artifact/MH8uWoTmFY2CAVkGv67vmv)** hoặc file cục bộ [`index.html`](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/index.html) và tự do thao tác trên cả 3 option mà không cần cài đặt.
 - [x] **Khởi đầu nhất quán**: Cả 3 option đều bắt đầu từ cùng một bài giảng và công thức toán thực tế.
 - [x] **Tự giải thích (Self-explanatory)**: Giao diện và các nút bấm rõ ràng, không cần facilitator dẫn dắt hay thuyết minh hộ.
 - [x] **Dữ liệu thật (Realistic Canned Output)**: Kiến thức toán học, câu hỏi chẩn đoán và nội dung ôn tập chính xác về mặt giải tích, đủ thật để tester ra quyết định.
-- [x] **Điểm phục hồi quyền kiểm soát (Control & Recovery)**: Có đủ nút `↺ Reset`, `User Override` (tự chọn bài ôn), và `Trở về mặc định`.
+- [x] **Điểm phục hồi quyền kiểm soát (Control & Recovery)**: Có đủ nút `↺ Reset`, `User Override` (tự chọn bài ôn), chuyển đổi chế độ xem (Tree/List) và `Trở về mặc định`.
 - [x] **Đường quay về context ban đầu**: Luôn có nút quay lại đọc tiếp bài học sau khi gỡ rối xong.
 
 ---
@@ -145,10 +145,10 @@ RESULT / USER DECISION (Kết quả gỡ kẹt & Quyền tự quyết / Recovery
 | Thời gian | Nội dung công việc | Kết quả đạt được |
 | :---: | :--- | :--- |
 | **Phút 0–10** | Dựng khung Layout chuẩn 2 cột: Cột trái cố định bài học mẫu (70% context), cột phải là Interaction Panel. | Hoàn thành HTML ngữ cảnh bài giảng và công thức Gradient Descent. |
-| **Phút 10–55** | Xây dựng logic tương tác cho 3 Option bằng Vanilla HTML/CSS/JS. | • Option A: Flow chat 2 bước Socratic.<br>• Option B: Cây phả hệ node tương tác.<br>• Option C: Bộ bóc tách ký hiệu và slider 3 nấc. |
-| **Phút 55–65** | Bổ sung các thành tố Evidence/Uncertainty và Control/Recovery. | • Badge độ tin cậy 88%, nhãn vùng rủi ro ⚠️.<br>• Nút Chẩn đoán lại, Nút User Override, Mini-quiz. |
-| **Phút 65–75** | Kiểm thử chéo giữa các thành viên trong nhóm. | Thử đóng vai tester click thử các option, phát hiện lỗi tràn khung chat và đã fix CSS. |
-| **Phút 75–80** | Chuẩn hóa giao diện A/B/C, kiểm tra đường dẫn cục bộ và nút reset. | Prototype test-ready 100%, chuyển tab mượt mà trên trình duyệt. |
+| **Phút 10–55** | Mỗi thành viên tập trung xây dựng một Option bằng shared components. | • Option A: Flow chat 2 bước Socratic.<br>• **Option B (Cá nhân phụ trách)**: Cây phả hệ tri thức 2 tầng, card đối chiếu cũ/mới và chế độ danh sách phẳng.<br>• Option C: Bộ bóc tách ký hiệu và slider 3 nấc. |
+| **Phút 55–65** | Bổ sung các thành tố Evidence/Uncertainty và Control/Recovery. | • Badge độ tin cậy 88%, nhãn vùng rủi ro 85% ⚠️.<br>• Nút Chẩn đoán lại, Nút Đặt lại bản đồ, Nút chuyển Tree/List view, Mini-quiz. |
+| **Phút 65–75** | Kiểm thử chéo giữa các thành viên trong nhóm. | Mỗi thành viên tự test option do người khác build, phát hiện các điểm ngập ngừng và ghi chép hành vi. |
+| **Phút 75–80** | Chuẩn hóa giao diện A/B/C, kiểm tra link trực tuyến, đường dẫn cục bộ và nút reset. | Prototype test-ready 100%, sẵn sàng chạy tại link trực tuyến và trên trình duyệt cục bộ. |
 
 ---
 
@@ -164,9 +164,9 @@ RESULT / USER DECISION (Kết quả gỡ kẹt & Quyền tự quyết / Recovery
 ```
 
 ```
-[OPTION B: Prerequisite Concept Radar]
-• We expect the tester to: Mở tab Option B, nhìn vào cây sơ đồ phả hệ kiến thức, tự click vào node được cảnh báo hoặc các node khác, đọc phần đối chiếu liên hệ với bài mới.
-• Watch for: Tester bị thu hút bởi node nào trước tiên? Có bị ngợp trước các mũi tên phân cấp không? Có hiểu tại sao node Đạo hàm riêng lại có viền màu cam cảnh báo không?
+[OPTION B: Prerequisite Concept Radar - Cá nhân phụ trách]
+• We expect the tester to: Mở tab Option B, nhìn vào cây sơ đồ phả hệ kiến thức (hoặc đổi sang dạng danh sách phẳng), tự click vào node được cảnh báo hoặc các node khác, đọc phần đối chiếu liên hệ với bài mới và bấm nút đối chiếu công thức.
+• Watch for: Tester bị thu hút bởi node nào trước tiên? Có bị ngợp trước các mũi tên phân cấp không? Có thử bấm đổi giữa Sơ đồ và Danh sách không? Có hiểu tại sao node Đạo hàm riêng lại có nhãn "Vùng dễ nhầm lẫn nhất 85% ⚠️" không?
 • Do not explain: Không chỉ tester bấm vào ô màu cam; không giải thích cấu trúc cây phả hệ; không đọc hộ phần đối chiếu.
 ```
 
@@ -180,7 +180,7 @@ RESULT / USER DECISION (Kết quả gỡ kẹt & Quyền tự quyết / Recovery
 ---
 
 #### GATE 4 — Test-ready Confirmation:
-- [x] Một người ngoài nhóm có thể mở file [`index.html`](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/index.html), thực hiện trọn vẹn task trên cả A/B/C và quay về bài học ban đầu mà không cần ai giải thích hộ.
+- [x] Một người ngoài nhóm có thể mở link trực tuyến **[Claude Artifact](https://claude.ai/artifact/MH8uWoTmFY2CAVkGv67vmv)** hoặc file cục bộ [`index.html`](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/index.html), thực hiện trọn vẹn task trên cả A/B/C và quay về bài học ban đầu mà không cần ai giải thích hộ.
 
 ---
 
@@ -191,6 +191,50 @@ RESULT / USER DECISION (Kết quả gỡ kẹt & Quyền tự quyết / Recovery
 * **Outcome Task**: *"Hãy xác định xem ký hiệu $\frac{\partial L}{\partial w}$ trong công thức đòi hỏi kiến thức nền gì từ trước và làm sao để hiểu được nó."*
 * **Bảng tiêu chí quan sát hành vi (Observation Focus)**:
   1. *Thao tác đầu tiên*: Người dùng click vào đâu trước tiên khi nhìn thấy công thức?
+  2. *Điểm ngập ngừng / Bối rối*: Họ có đọc câu hỏi chẩn đoán không? Có bị ngợp trước cây sơ đồ không? Có tìm thấy thanh trượt không?
+  3. *Mức độ kiên nhẫn*: Họ dành bao nhiêu giây để đọc nội dung giải thích của AI?
+  4. *Phản xạ phục hồi (Recovery)*: Khi AI đưa ra kết quả, họ bấm tiếp tục hay tìm cách sửa?
+  5. *Đánh đổi*: Họ thích sự nhanh gọn (Inline) hay thích được định hướng từng bước (Socratic) hay muốn nhìn thấy toàn cảnh (Concept Radar)?
+
+---
+
+### Chặng 6 — Kiểm thử chéo & Tổng hợp Next Change (20 phút)
+
+#### 1. Ma trận đối chiếu 3 Tester độc lập
+| Tester / Facilitator | Option A (Socratic Chat) | Option B (Concept Radar) | Option C (Inline Scaffolding) | Đánh đổi & Xu hướng lựa chọn |
+| :--- | :--- | :--- | :--- | :--- |
+| **Tester 1**<br>*(Thành viên 1 facilitate)*<br>SV CNTT năm 3 | Thao tác 45s; trả lời nhanh 2 câu hỏi; rất thích việc AI "bắt đúng bệnh" không cần gõ từ khóa. | Chú ý ngay vào nút cam cảnh báo; nhận xét cây sơ đồ hơi nhiều chữ lúc đang bị rối; bấm nút đối chiếu công thức thấy trực quan. | Kéo thanh trượt qua cả 3 mức; thích nhất Mức 2 (So sánh cũ/mới); làm mini-quiz và rất hào hứng khi đúng. | **Chọn C cho việc học hàng ngày**, nhưng **chọn A khi hoàn toàn bế tắc**. Đánh đổi giữa việc *"giữ mạch đọc"* (C) và *"được định hướng khi mất gốc"* (A). |
+| **Tester 2**<br>*(Thành viên 2 facilitate)*<br>Chuyển ngành Data | Bấm chat ngay; AI điều chỉnh câu hỏi tốt; nhẹ nhõm vì không phải tự tìm tài liệu cũ. | Đọc kỹ đối chiếu lý thuyết; khen bản đồ giúp hiểu logic bài, nhưng lúc làm bài tập gấp thì không đủ kiên nhẫn đọc. | Thử bấm từng ký hiệu; nhận xét Mức 2 là vừa vặn nhất; thích inline vì không che bài giảng. | **Thích kết hợp A và C**. Nhận xét: Option B phù hợp để review trước kỳ thi hơn là lúc đang kẹt bài. |
+| **Tester 3**<br>*(Thành viên 3 facilitate)*<br>Học viên Python online | Ban đầu sợ bị AI "dạy đời" bài dài; sau khi thấy chỉ có 2 câu trắc nghiệm ngắn thì hoàn thành rất nhanh. | Lúng túng trước các mũi tên sơ đồ; sau khi chuyển sang xem dạng danh sách phẳng thì định vị được nút đạo hàm riêng nhanh hơn. | Thích việc chọn thẳng vào ký hiệu $\partial$; kéo Mức 2 xem giải thích rồi đóng lại đọc bài ngay. | **Chọn C là giải pháp tiện nhất**. Không muốn mở cửa sổ chat phụ vì cảm giác như bị gián đoạn và thừa nhận mình "kém cỏi". |
+
+#### 2. Group Next Change Statement (Tuyên bố cải tiến nhóm)
+Tuân thủ nghiêm ngặt quy định: **Không tuyên bố solution đã validated**, nhóm đúc kết tuyên bố lặp chuẩn mực:
+
+> **“Với Hypothesis Problem này (học viên bế tắc cục bộ, ngại quá tải khi ôn lại cả bài và tốn công giải thích bối cảnh cho AI ngoài), chúng tôi đã thử ba cách giải (A, B, C).**  
+> **Tester đã có xu hướng ưu tiên sự liền mạch của Option C (Inline Scaffolding) để không làm đứt gãy dòng đọc bài, nhưng vẫn cần cơ chế gợi mở và khoanh vùng lỗ hổng tự động của Option A khi hoàn toàn bế tắc.**  
+>  
+> **Vì vậy, ở iteration tiếp theo, chúng tôi sẽ:**  
+> 1. **Hợp nhất cơ chế chẩn đoán nhanh của Option A trực tiếp vào thanh công cụ Inline của Option C**: Khi người dùng bôi đen một vùng công thức mà không rõ mình vướng ký hiệu nào, một nút nhỏ *"Chẩn đoán nhanh 2 câu"* sẽ xuất hiện ngay tại chỗ thay vì mở khung chat riêng biệt.  
+> 2. **Chuyển Option B (Bản đồ khái niệm) thành tính năng hậu kỳ**: Đặt Bản đồ kiến thức ở cuối bài học dưới dạng *"Tóm tắt các mắt xích đã học"* phục vụ ôn tập, thay vì hiển thị song song gây nhiễu lúc đang đọc bài.  
+> 3. **Bổ sung tính năng Kiểm tra củng cố (Micro-Check)**: Mở rộng tính năng câu hỏi trắc nghiệm mini 1-click sau mỗi lần bóc tách kiến thức để người học tự tin rằng mình đã thực sự hiểu trước khi quay lại bài giảng chính.”
+
+---
+
+## 3. Đóng góp cá nhân
+
+1. **Khởi tạo và bảo vệ Hypothesis Problem**: Dẫn dắt Chặng 1 dựa trên dữ liệu phỏng vấn sâu Day 17 (cô lập 5 thành phần cốt lõi của bài toán người học bị khựng lại trước công thức toán).
+2. **Chịu trách nhiệm chính thiết kế & hiện thực hóa Option B (Prerequisite Concept Radar)**:
+   * **Cơ chế tương tác & Human–AI Paradigm**: Xây dựng giải pháp theo triết lý *User-led Metacognition* (Người dùng tự chủ định vị lỗ hổng, AI ở trạng thái *Don't Act* tĩnh lặng, chỉ hiển thị đối chiếu khi được yêu cầu).
+   * **Kiến trúc tri thức 2 tầng**: Thiết kế cấu trúc phả hệ phân tầng rõ ràng từ *Nền tảng Cấp 3 / Đại cương* (Đạo hàm 1 biến $dy/dx$, Quy tắc chuỗi 1D) $\rightarrow$ *Giải tích đa biến* (Đạo hàm riêng $\partial$, Vector Gradient $\nabla L$).
+   * **Thành tố Evidence / Uncertainty trực quan**: Gắn nhãn phân loại rủi ro *[Nền tảng căn bản]* vs *[Vùng dễ nhầm lẫn nhất 85% ⚠️]*, giúp người học nhận diện điểm nghi vấn cao nhất mà không bị áp đặt.
+   * **Thành tố Control & Recovery**: Bổ sung bộ chuyển đổi chế độ xem kép (`🌳 Sơ đồ phả hệ` $\leftrightarrow$ `📋 Danh sách phẳng`), nút `↺ Đặt lại bản đồ` và nút `🔍 Đối chiếu ký hiệu trên công thức` liên kết trực tiếp với bài giảng chính.
+   * **Soạn thảo Prototype Annotation chuẩn cho Option B**: Xác lập rõ kỳ vọng hành vi, các điểm cần quan sát và nguyên tắc không giải thích hộ cho Facilitator.
+3. **Phối hợp phát triển Micro-Prototype dùng chung 70% Context**:
+   * Cùng nhóm chuẩn hóa layout 2 cột cố định bài học Machine Learning và công thức cập nhật trọng số Gradient Descent $w_{new} = w_{old} - \eta \cdot \frac{\partial L}{\partial w}$.
+   * Triển khai bộ prototype lên nền tảng trực tuyến tại: **[https://claude.ai/artifact/MH8uWoTmFY2CAVkGv67vmv](https://claude.ai/artifact/MH8uWoTmFY2CAVkGv67vmv)** và kiểm tra tính tương thích ngoại tuyến với [`index.html`](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/index.html).
+4. **Kiểm thử chéo & Tổng hợp phản hồi (Chặng 6)**:
+   * Trực tiếp thực hiện kiểm thử chéo ở phút 65–75 (trải nghiệm thử Option A và C do các bạn khác build).
+   * Điều phối phiên test với Tester 1, quan sát cách người dùng tương tác với Option B do mình thiết kế, ghi nhận đánh đổi thực tế (người dùng thích cái nhìn tổng quan nhưng bị quá tải nhận thức khi đang cần làm bài gấp) và đề xuất chuyển Option B thành tính năng ôn tập hậu kỳ trong *Group Next Change*. 1. *Thao tác đầu tiên*: Người dùng click vào đâu trước tiên khi nhìn thấy công thức?
   2. *Điểm ngập ngừng / Bối rối*: Họ có đọc câu hỏi chẩn đoán không? Có bị ngợp trước cây sơ đồ không? Có tìm thấy thanh trượt không?
   3. *Mức độ kiên nhẫn*: Họ dành bao nhiêu giây để đọc nội dung giải thích của AI?
   4. *Phản xạ phục hồi (Recovery)*: Khi AI đưa ra kết quả, họ bấm tiếp tục hay tìm cách sửa?

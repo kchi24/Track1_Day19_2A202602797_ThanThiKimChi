@@ -585,17 +585,96 @@ body {
 .radar-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
   flex: 1;
+}
+
+.radar-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 .radar-instructions {
   font-size: 0.85rem;
   color: var(--text-muted);
+  flex: 1;
 }
 
 .radar-instructions strong {
   color: #38bdf8;
+}
+
+.view-mode-toggle {
+  display: flex;
+  background: #0b1120;
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-sm);
+  padding: 2px;
+  gap: 2px;
+}
+
+.mode-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  font-size: 0.72rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.mode-btn:hover {
+  color: #f8fafc;
+}
+
+.mode-btn.active {
+  background: rgba(6, 182, 212, 0.2);
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.concept-flat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #090d16;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--surface-border);
+}
+
+.list-item-card {
+  background: var(--surface-alt);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  text-align: left;
+  cursor: pointer;
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.list-item-card:hover {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  transform: translateX(3px);
+}
+
+.list-item-card.highlight-suspect {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.list-item-card.highlight-suspect:hover {
+  border-color: #f59e0b;
 }
 
 .concept-tree {
@@ -812,4 +891,33 @@ body {
   .main-layout {
     grid-template-columns: 1fr;
   }
+}
+
+/* ================= GATE 4: reset path & toast ================= */
+.btn-reset-all {
+  background: transparent;
+  color: #cbd5e1;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font: inherit;
+  font-size: 0.78rem;
+  cursor: pointer;
+  margin-right: 12px;
+}
+.btn-reset-all:hover { color: #fff; border-color: #38bdf8; }
+.btn-back-lesson { border-color: rgba(16, 185, 129, 0.6); color: #34d399; }
+.formula-card.flash { box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.7); transition: box-shadow 0.3s ease; }
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0f172a;
+  color: #e2e8f0;
+  border: 1px solid #38bdf8;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  z-index: 100;
 }

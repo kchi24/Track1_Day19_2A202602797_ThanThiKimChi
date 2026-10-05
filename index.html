@@ -19,6 +19,7 @@
     </div>
     <!-- Option Switcher to allow testers to switch between A, B, and C easily -->
     <div class="option-switcher-container">
+      <button class="btn-reset-all" onclick="resetAll()" title="Xóa mọi thao tác ở cả 3 option và quay về bài học ban đầu">↺ Về bài học ban đầu</button>
       <span class="switcher-label">Chế độ tương tác (3 Options):</span>
       <div class="option-nav" role="tablist">
         <button class="nav-btn active" id="btn-opt-a" onclick="switchOption('A')">
@@ -149,13 +150,19 @@
         </div>
 
         <div class="radar-container">
-          <div class="radar-instructions">
-            <strong>Bản đồ kiến thức nền tảng của bài học này:</strong>
-            <p>Bấm vào bất kỳ khái niệm nào bạn cảm thấy chưa vững để xem đối chiếu giải thích:</p>
+          <div class="radar-toolbar">
+            <div class="radar-instructions">
+              <strong>Bản đồ kiến thức nền tảng của bài học này:</strong>
+              <p>Bấm vào bất kỳ khái niệm nào bạn cảm thấy chưa vững để xem đối chiếu giải thích:</p>
+            </div>
+            <div class="view-mode-toggle">
+              <button class="mode-btn active" id="btn-mode-tree" onclick="switchRadarMode('tree')">🌳 Sơ đồ</button>
+              <button class="mode-btn" id="btn-mode-list" onclick="switchRadarMode('list')">📋 Danh sách</button>
+            </div>
           </div>
 
           <!-- Tree of Prerequisites -->
-          <div class="concept-tree">
+          <div class="concept-tree" id="radar-tree-view">
             <!-- Level 1: Cấp 3 -->
             <div class="tree-level">
               <span class="level-label">Nền tảng Cấp 3 / Đại học đại cương</span>
@@ -180,7 +187,7 @@
               <span class="level-label">Giải tích đa biến</span>
               <div class="tree-nodes">
                 <button class="node-card highlight-suspect" id="node-partial" onclick="selectNode('partial')">
-                  <span class="node-badge suspect">Vùng dễ nhầm lẫn nhất ⚠️</span>
+                  <span class="node-badge suspect">Vùng dễ nhầm lẫn nhất 85% ⚠️</span>
                   <span class="node-title">Đạo hàm riêng (Partial Derivative &part;)</span>
                   <span class="node-state">Nghi ngờ bị hổng nhiều nhất</span>
                 </button>
@@ -193,6 +200,26 @@
             </div>
           </div>
 
+          <!-- Flat List View (Alternative Mode for Recovery) -->
+          <div class="concept-flat-list hidden" id="radar-list-view">
+            <button class="list-item-card" onclick="selectNode('deriv-1')">
+              <span class="node-badge basic">Căn bản</span>
+              <strong>Đạo hàm 1 biến:</strong> Hệ số góc tiếp tuyến, tỷ lệ biến thiên tức thời $f'(x)$.
+            </button>
+            <button class="list-item-card" onclick="selectNode('chain-1')">
+              <span class="node-badge basic">Căn bản</span>
+              <strong>Quy tắc chuỗi 1D:</strong> Đạo hàm hàm hợp lồng nhau $[f(g(x))]'$.
+            </button>
+            <button class="list-item-card highlight-suspect" onclick="selectNode('partial')">
+              <span class="node-badge suspect">85% nhầm lẫn ⚠️</span>
+              <strong>Đạo hàm riêng &part;:</strong> Đạo hàm theo 1 biến, cố định các biến còn lại.
+            </button>
+            <button class="list-item-card" onclick="selectNode('gradient')">
+              <span class="node-badge medium">Nâng cao</span>
+              <strong>Vector Gradient &nabla;L:</strong> Vector hướng dốc tăng nhanh nhất của hàm số.
+            </button>
+          </div>
+
           <!-- Selected Concept Detail Card -->
           <div class="concept-detail-box" id="concept-detail-box">
             <div class="detail-placeholder">👈 Chọn một khái niệm trên bản đồ để xem AI phân tích đối chiếu.</div>
@@ -200,7 +227,9 @@
 
           <div class="radar-footer">
             <button class="btn-recovery" onclick="resetRadar()">↺ Đặt lại bản đồ</button>
-            <span class="hint-text">Quyền quyết định thuộc về User</span>
+            <button class="btn-recovery" onclick="highlightFormulaFromRadar()">🔍 Đối chiếu ký hiệu trên công thức</button>
+            <button class="btn-recovery btn-back-lesson" onclick="returnToLesson()">✓ Đã rõ, quay lại bài học</button>
+            <span class="hint-text">Quyền tự quyết thuộc về User</span>
           </div>
         </div>
       </div>
@@ -243,12 +272,14 @@
           <div class="scaffold-footer">
             <button class="btn-recovery" onclick="triggerMiniQuizC()">✍️ Làm 1 câu trắc nghiệm nhanh để kiểm tra hiểu chưa</button>
             <button class="btn-recovery" onclick="resetScaffold()">Trở về mặc định</button>
+            <button class="btn-recovery btn-back-lesson" onclick="returnToLesson()">✓ Đã rõ, quay lại bài học</button>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <div class="toast hidden" id="toast" role="status"></div>
   <script src="app.js"></script>
 </body>
 </html>
