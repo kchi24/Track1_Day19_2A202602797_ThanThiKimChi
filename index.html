@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tutor: Diagnostic Refresher - Micro-Prototypes (A/B/C)</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="app-header">
+    <div class="header-left">
+      <span class="badge-tag">Track 1 · Lab Day 18–19</span>
+      <h1 class="app-title">AI Tutor: Diagnostic Refresher</h1>
+      <span class="student-info">Học viên: <strong>Thân Thị Kim Chi</strong> (2A202602797)</span>
+    </div>
+    <!-- Option Switcher to allow testers to switch between A, B, and C easily -->
+    <div class="option-switcher-container">
+      <span class="switcher-label">Chế độ tương tác (3 Options):</span>
+      <div class="option-nav" role="tablist">
+        <button class="nav-btn active" id="btn-opt-a" onclick="switchOption('A')">
+          <span class="opt-tag">Option A</span>
+          <span class="opt-desc">Socratic Diagnostic Chat</span>
+        </button>
+        <button class="nav-btn" id="btn-opt-b" onclick="switchOption('B')">
+          <span class="opt-tag">Option B</span>
+          <span class="opt-desc">Prerequisite Concept Radar</span>
+        </button>
+        <button class="nav-btn" id="btn-opt-c" onclick="switchOption('C')">
+          <span class="opt-tag">Option C</span>
+          <span class="opt-desc">Inline Scaffolding Co-pilot</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner giải thích cơ chế hiện tại cho Tester -->
+  <div class="mechanism-banner" id="mechanism-banner">
+    <div class="banner-content">
+      <span class="badge-role" id="banner-role">AI dẫn dắt (Socratic)</span>
+      <p id="banner-text"><strong>Option A:</strong> AI chủ động hỏi 2 câu ngắn để chẩn đoán chính xác lỗ hổng kiến thức nền, sau đó sinh bài ôn tập cấp tốc ngay tại chỗ.</p>
+    </div>
+    <div class="banner-hint">💡 Hãy bấm vào nút hoặc thử tương tác với công thức bên dưới</div>
+  </div>
+
+  <!-- Main Workspace: Split into Lesson Content (70% common context) + Interaction Panel -->
+  <main class="main-layout">
+    <!-- LEFT PANEL: Common Course Content (70% Common Context) -->
+    <section class="lesson-panel">
+      <div class="lesson-header">
+        <span class="lesson-meta">Khóa học: Nhập môn Machine Learning · Bài 4</span>
+        <h2 class="lesson-title">Thuật toán Gradient Descent & Quy tắc Chuỗi (Chain Rule)</h2>
+      </div>
+
+      <div class="lesson-body">
+        <p class="paragraph">
+          Trong quá trình huấn luyện mạng nơ-ron, mục tiêu cốt lõi là tối thiểu hóa hàm mất mát (Loss Function) $L(w)$. Để cập nhật trọng số $w$ theo hướng giảm nhanh nhất của hàm mất mát, chúng ta tính toán độ dốc (Gradient) tại điểm hiện tại.
+        </p>
+
+        <!-- CRITICAL INTERACTION POINT: The complex formula that causes confusion -->
+        <div class="formula-card" id="target-formula-card">
+          <div class="formula-label">Công thức cập nhật trọng số (Critical Point):</div>
+          <div class="formula-display" id="formula-selectable">
+            w_new = w_old - &eta; &middot; &part;L / &part;w
+          </div>
+          <p class="formula-caption">
+            Trong đó: &eta; là Learning Rate, &part;L/&part;w là đạo hàm riêng của hàm mất mát theo trọng số w.
+          </p>
+
+          <!-- Interaction Trigger for Option A -->
+          <div class="action-bar-option" id="trigger-opt-a">
+            <button class="btn-help-primary" id="btn-trigger-a" onclick="openOptionA()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              Tôi chưa hiểu đoạn này (Khám phá lỗ hổng)
+            </button>
+            <span class="help-hint">AI sẽ hỏi 2 câu ngắn để tìm ra phần bạn đang quên</span>
+          </div>
+
+          <!-- Interaction Trigger for Option C -->
+          <div class="action-bar-option hidden" id="trigger-opt-c">
+            <div class="inline-trigger-box">
+              <span class="badge-hint">Option C: Thao tác trực tiếp</span>
+              <p>Hãy bấm vào các thành phần của công thức để AI phân rã từng tầng kiến thức:</p>
+              <div class="formula-tokens">
+                <button class="token-btn" onclick="deconstructToken('partial')">&part;L / &part;w (Đạo hàm riêng)</button>
+                <button class="token-btn" onclick="deconstructToken('eta')">&eta; (Learning Rate)</button>
+                <button class="token-btn" onclick="deconstructToken('minus')">Dấu - (Hướng ngược gradient)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="paragraph">
+          Khi mô hình gồm nhiều lớp xếp chồng, hàm mất mát trở thành hàm hợp nhiều tầng: L = f_n(f_{n-1}(...f_1(x)...)). Để tính được đạo hàm theo trọng số lớp đầu, ta bắt buộc phải sử dụng <strong>Chain Rule</strong> (quy tắc đạo hàm hàm hợp).
+        </p>
+
+        <div class="callout-box">
+          <div class="callout-icon">📌</div>
+          <div>
+            <strong>Lưu ý quan trọng:</strong> Nếu bạn không nắm chắc ý nghĩa hình học của đạo hàm 1 biến hoặc cách tính đạo hàm riêng &part;, bạn sẽ rất khó hiểu tại sao gradient lại chỉ hướng dốc nhất!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT PANEL: Distinct Human-AI Interaction Spaces -->
+    <section class="interaction-panel">
+      <!-- ================= OPTION A CONTAINER (Kim Chi) ================= -->
+      <div class="opt-view" id="view-opt-a">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="indicator-dot dot-a"></span>
+            <h3>Option A: Socratic Diagnostic Chat</h3>
+          </div>
+          <span class="sub-status" id="opt-a-status">Trạng thái: Sẵn sàng chẩn đoán</span>
+        </div>
+
+        <div class="chat-container" id="chat-container">
+          <div class="chat-empty-state" id="chat-empty-state">
+            <div class="empty-icon">🤖</div>
+            <h4>Chẩn đoán thông minh cùng AI Tutor</h4>
+            <p>Khi bạn cảm thấy kẹt hoặc bối rối trước công thức trên, hãy bấm nút <strong>"Tôi chưa hiểu đoạn này"</strong> bên trái để AI bắt đầu 2 câu hỏi gợi mở.</p>
+          </div>
+
+          <!-- Diagnostic Chat Box (Hidden initially) -->
+          <div class="chat-messages hidden" id="chat-messages"></div>
+        </div>
+
+        <!-- Chat Input / Action Recovery Area -->
+        <div class="chat-footer hidden" id="chat-footer">
+          <div class="recovery-actions">
+            <button class="btn-recovery" onclick="resetOptionA()">↺ Chẩn đoán lại từ đầu</button>
+            <button class="btn-recovery" onclick="overrideDiagnosisA()">⚠️ AI đoán sai? Tôi tự chọn bài ôn</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= OPTION B CONTAINER ================= -->
+      <div class="opt-view hidden" id="view-opt-b">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="indicator-dot dot-b"></span>
+            <h3>Option B: Prerequisite Concept Radar</h3>
+          </div>
+          <span class="sub-status">User chủ động định vị</span>
+        </div>
+
+        <div class="radar-container">
+          <div class="radar-instructions">
+            <strong>Bản đồ kiến thức nền tảng của bài học này:</strong>
+            <p>Bấm vào bất kỳ khái niệm nào bạn cảm thấy chưa vững để xem đối chiếu giải thích:</p>
+          </div>
+
+          <!-- Tree of Prerequisites -->
+          <div class="concept-tree">
+            <!-- Level 1: Cấp 3 -->
+            <div class="tree-level">
+              <span class="level-label">Nền tảng Cấp 3 / Đại học đại cương</span>
+              <div class="tree-nodes">
+                <button class="node-card" id="node-deriv-1" onclick="selectNode('deriv-1')">
+                  <span class="node-badge basic">Tiên quyết 1</span>
+                  <span class="node-title">Đạo hàm 1 biến & Tiếp tuyến</span>
+                  <span class="node-state">Nhấn để xem lại</span>
+                </button>
+                <button class="node-card" id="node-chain-1" onclick="selectNode('chain-1')">
+                  <span class="node-badge basic">Tiên quyết 2</span>
+                  <span class="node-title">Quy tắc đạo hàm hàm hợp cơ bản</span>
+                  <span class="node-state">Nhấn để xem lại</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="tree-arrow">↓</div>
+
+            <!-- Level 2: Toán đa biến -->
+            <div class="tree-level">
+              <span class="level-label">Giải tích đa biến</span>
+              <div class="tree-nodes">
+                <button class="node-card highlight-suspect" id="node-partial" onclick="selectNode('partial')">
+                  <span class="node-badge suspect">Vùng dễ nhầm lẫn nhất ⚠️</span>
+                  <span class="node-title">Đạo hàm riêng (Partial Derivative &part;)</span>
+                  <span class="node-state">Nghi ngờ bị hổng nhiều nhất</span>
+                </button>
+                <button class="node-card" id="node-gradient" onclick="selectNode('gradient')">
+                  <span class="node-badge medium">Nâng cao</span>
+                  <span class="node-title">Vector Gradient & Hướng dốc nhất</span>
+                  <span class="node-state">Nhấn để xem lại</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Selected Concept Detail Card -->
+          <div class="concept-detail-box" id="concept-detail-box">
+            <div class="detail-placeholder">👈 Chọn một khái niệm trên bản đồ để xem AI phân tích đối chiếu.</div>
+          </div>
+
+          <div class="radar-footer">
+            <button class="btn-recovery" onclick="resetRadar()">↺ Đặt lại bản đồ</button>
+            <span class="hint-text">Quyền quyết định thuộc về User</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= OPTION C CONTAINER ================= -->
+      <div class="opt-view hidden" id="view-opt-c">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="indicator-dot dot-c"></span>
+            <h3>Option C: Inline Scaffolding Co-pilot</h3>
+          </div>
+          <span class="sub-status">Đồng sáng tạo (Co-pilot)</span>
+        </div>
+
+        <div class="scaffold-container">
+          <div class="scaffold-header-box">
+            <h4>Bóc tách cấu trúc công thức theo tầng</h4>
+            <p>Chọn thành phần công thức ở khung bên trái hoặc thanh bên dưới để kiểm soát độ sâu bóc tách:</p>
+          </div>
+
+          <!-- Depth Slider Control -->
+          <div class="slider-control-card">
+            <div class="slider-labels">
+              <span>Mức 1: Nhắc nhanh (30s)</span>
+              <span class="slider-active-label" id="slider-text">Mức 2: So sánh kiến thức cũ/mới</span>
+              <span>Mức 3: Đào sâu kèm ví dụ</span>
+            </div>
+            <input type="range" min="1" max="3" value="2" class="depth-slider" id="depthSlider" oninput="changeScaffoldDepth(this.value)">
+          </div>
+
+          <!-- Deconstructed Output Card -->
+          <div class="scaffold-output-card" id="scaffold-output">
+            <div class="scaffold-token-header">
+              <span class="token-name" id="scaffold-token-title">Ký hiệu: &part;L / &part;w (Đạo hàm riêng)</span>
+              <span class="token-tag" id="scaffold-token-badge">Phân rã Mức 2</span>
+            </div>
+            <div class="scaffold-body" id="scaffold-body-content"></div>
+          </div>
+
+          <div class="scaffold-footer">
+            <button class="btn-recovery" onclick="triggerMiniQuizC()">✍️ Làm 1 câu trắc nghiệm nhanh để kiểm tra hiểu chưa</button>
+            <button class="btn-recovery" onclick="resetScaffold()">Trở về mặc định</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
