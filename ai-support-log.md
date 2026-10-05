@@ -1,6 +1,6 @@
 # AI Support Log (Nhật Ký Sử Dụng AI Minh Bạch)
 
-> **Học viên**: Thân Thị Kim Chi (2A202602797)  
+> **Mã học viên**: 2A202602797  
 > **Dự án**: Track 1 — Day 18–19 Lab: Diagnostic Refresher  
 > **Cam kết liêm chính học thuật**: Toàn bộ dữ liệu phỏng vấn, quan sát hành vi người dùng thật, sự đánh đổi và các quyết định thiết kế đều dựa trên tương tác thực tế. AI chỉ đóng vai trò trợ lý hỗ trợ kỹ thuật, lập trình prototype và cấu trúc hóa tài liệu theo yêu cầu đề bài.
 
@@ -24,4 +24,4 @@
 - [x] **Không dùng AI để tạo quote hoặc bịa đặt dữ liệu thử nghiệm người dùng.**
 - [x] **Không tuyên bố giải pháp đã được "validated" chỉ với 3 tester.**
 - [x] **Bảo toàn tính liên tục từ Hypothesis Problem của Day 17 sang Day 18–19.**
-- [x] **Nêu rõ sự đóng góp của cá nhân Thân Thị Kim Chi trong sản phẩm chung của nhóm.**
+- [x] **Nêu rõ sự đóng góp của cá nhân trong sản phẩm chung của nhóm.**

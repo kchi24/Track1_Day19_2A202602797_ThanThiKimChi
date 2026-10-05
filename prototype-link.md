@@ -1,7 +1,7 @@
 # Prototype Link & Hướng Dẫn Trải Nghiệm Micro-Prototype
 
 > **Dự án**: AI Tutor — Diagnostic Refresher  
-> **Học viên**: Thân Thị Kim Chi (2A202602797)  
+> **Mã học viên**: 2A202602797  
 > **Thành viên nhóm**: Nhóm 3 người (Case A)  
 
 ---

@@ -1,7 +1,6 @@
-# Track1_Day19_2A202602797_ThanThiKimChi
+# Track1_Day19_2A202602797
 
 > **Dự án**: AI Tutor — Diagnostic Refresher (Khám phá Solution Space & Thử nghiệm Micro-Prototypes Human–AI)  
-> **Học viên**: Thân Thị Kim Chi  
 > **Mã học viên**: 2A202602797  
 > **Case nghiên cứu**: Case A — AI Tutor: Diagnostic Refresher (Tiếp nối trực tiếp từ Day 17)  
 > **Phân công cá nhân**: Chịu trách nhiệm chính **Option A (Socratic Diagnostic Chat)**; đồng thời tham gia thiết kế chung, chuẩn hóa prototype A/B/C và trực tiếp facilitate thử nghiệm với 1 tester ngoài nhóm.
@@ -15,7 +14,7 @@ Track1_Day19_2A202602797_ThanThiKimChi/
 ├── README.md                      # Báo cáo tổng quan toàn bộ 6 chặng của bài lab
 ├── three-option-design-sheet.md   # Bảng thiết kế chi tiết 3 Option (Comparison Contract & Human–AI Decision Table)
 ├── prototype-link.md              # Hướng dẫn chạy và link bộ micro-prototype A/B/C
-├── prototype-feedback-note.md     # Phiên test do chính Thân Thị Kim Chi facilitate với Tester ngoài nhóm
+├── prototype-feedback-note.md     # Phiên test do chính tác giả facilitate với Tester ngoài nhóm
 ├── group-feedback-synthesis.md    # Tổng hợp 3 Feedback Notes của nhóm & 1 Group Next Change
 ├── ai-support-log.md              # Khai báo minh bạch việc sử dụng công cụ AI
 ├── index.html                     # Mã nguồn Web Micro-prototype chung 70% context cho A/B/C
@@ -138,9 +137,9 @@ Nhóm chi tiết hóa 4 trụ cột tương tác cho cả 3 Option trong **Human
 #### 1. Ma trận đối chiếu 3 Tester độc lập
 | Tester / Facilitator | Option A (Socratic Chat) | Option B (Concept Radar) | Option C (Inline Scaffolding) | Đánh đổi & Xu hướng lựa chọn |
 | :--- | :--- | :--- | :--- | :--- |
-| **Tester 1**<br>*(Kim Chi facilitate)*<br>SV CNTT năm 3 | Thao tác 45s; trả lời nhanh 2 câu hỏi; rất thích việc AI "bắt đúng bệnh" không cần gõ từ khóa. | Chú ý ngay vào nút cam cảnh báo; nhận xét cây sơ đồ hơi nhiều chữ lúc đang bị rối. | Kéo thanh trượt qua cả 3 mức; thích nhất Mức 2 (So sánh cũ/mới); làm mini-quiz và rất hào hứng khi đúng. | **Chọn C cho việc học hàng ngày**, nhưng **chọn A khi hoàn toàn bế tắc**. Đánh đổi giữa việc *"giữ mạch đọc"* (C) và *"được định hướng khi mất gốc"* (A). |
-| **Tester 2**<br>*(Thành viên 2)*<br>Chuyển ngành Data | Bấm chat ngay; AI điều chỉnh câu hỏi tốt; nhẹ nhõm vì không phải tự tìm tài liệu cũ. | Đọc kỹ đối chiếu lý thuyết; khen bản đồ giúp hiểu logic bài, nhưng lúc làm bài tập gấp thì không đủ kiên nhẫn đọc. | Thử bấm từng ký hiệu; nhận xét Mức 2 là vừa vặn nhất; thích inline vì không che bài giảng. | **Thích kết hợp A và C**. Nhận xét Option B phù hợp để review trước kỳ thi hơn là lúc đang kẹt bài. |
-| **Tester 3**<br>*(Thành viên 3)*<br>Học viên Python online | Ban đầu sợ bị AI "dạy đời" bài dài; sau khi thấy chỉ có 2 câu trắc nghiệm ngắn thì hoàn thành rất nhanh. | Lúng túng trước các mũi tên sơ đồ; bấm nhầm sang nhánh khác trước khi thấy nút đạo hàm riêng. | Thích việc chọn thẳng vào ký hiệu $\partial$; kéo Mức 2 xem giải thích rồi đóng lại đọc bài ngay. | **Chọn C là giải pháp tiện nhất**. Không muốn mở cửa sổ chat phụ vì cảm giác như bị gián đoạn và thừa nhận mình "kém cỏi". |
+| **Tester 1**<br>*(Thành viên 1 facilitate)*<br>SV CNTT năm 3 | Thao tác 45s; trả lời nhanh 2 câu hỏi; rất thích việc AI "bắt đúng bệnh" không cần gõ từ khóa. | Chú ý ngay vào nút cam cảnh báo; nhận xét cây sơ đồ hơi nhiều chữ lúc đang bị rối. | Kéo thanh trượt qua cả 3 mức; thích nhất Mức 2 (So sánh cũ/mới); làm mini-quiz và rất hào hứng khi đúng. | **Chọn C cho việc học hàng ngày**, nhưng **chọn A khi hoàn toàn bế tắc**. Đánh đổi giữa việc *"giữ mạch đọc"* (C) và *"được định hướng khi mất gốc"* (A). |
+| **Tester 2**<br>*(Thành viên 2 facilitate)*<br>Chuyển ngành Data | Bấm chat ngay; AI điều chỉnh câu hỏi tốt; nhẹ nhõm vì không phải tự tìm tài liệu cũ. | Đọc kỹ đối chiếu lý thuyết; khen bản đồ giúp hiểu logic bài, nhưng lúc làm bài tập gấp thì không đủ kiên nhẫn đọc. | Thử bấm từng ký hiệu; nhận xét Mức 2 là vừa vặn nhất; thích inline vì không che bài giảng. | **Thích kết hợp A và C**. Nhận xét Option B phù hợp để review trước kỳ thi hơn là lúc đang kẹt bài. |
+| **Tester 3**<br>*(Thành viên 3 facilitate)*<br>Học viên Python online | Ban đầu sợ bị AI "dạy đời" bài dài; sau khi thấy chỉ có 2 câu trắc nghiệm ngắn thì hoàn thành rất nhanh. | Lúng túng trước các mũi tên sơ đồ; bấm nhầm sang nhánh khác trước khi thấy nút đạo hàm riêng. | Thích việc chọn thẳng vào ký hiệu $\partial$; kéo Mức 2 xem giải thích rồi đóng lại đọc bài ngay. | **Chọn C là giải pháp tiện nhất**. Không muốn mở cửa sổ chat phụ vì cảm giác như bị gián đoạn và thừa nhận mình "kém cỏi". |
 
 #### 2. Group Next Change Statement (Tuyên bố cải tiến nhóm)
 Tuân thủ nghiêm ngặt quy định: **Không tuyên bố solution đã validated**, nhóm đúc kết tuyên bố lặp chuẩn mực:
@@ -155,7 +154,7 @@ Tuân thủ nghiêm ngặt quy định: **Không tuyên bố solution đã valid
 
 ---
 
-## 3. Đóng góp cá nhân của Thân Thị Kim Chi
+## 3. Đóng góp cá nhân
 
 1. **Khởi tạo và bảo vệ Hypothesis Problem**: Dẫn dắt Chặng 1 dựa trên dữ liệu phỏng vấn sâu Day 17.
 2. **Chịu trách nhiệm chính Option A (Socratic Diagnostic Chat)**:

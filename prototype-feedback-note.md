@@ -1,6 +1,6 @@
-# Prototype Feedback Note (Phiên Test Do Thân Thị Kim Chi Facilitate)
+# Prototype Feedback Note
 
-> **Người thực hiện facilitate & ghi chép**: Thân Thị Kim Chi (2A202602797)  
+> **Người thực hiện facilitate & ghi chép**: Facilitator (2A202602797)  
 > **Tester tham gia**: Tester 1 — Nguyễn Hoàng Nam (21 tuổi, sinh viên năm 3 ngành Công nghệ Thông tin, đang tự học môn Machine Learning trực tuyến).  
 > **Thời gian test**: 25 phút.  
 > **Hình thức**: Trực tiếp 1-1 trên máy tính, quan sát màn hình và ghi chép hành vi.  
@@ -66,4 +66,4 @@
 | **Bảo toàn mạch học** | Bị tách ngữ cảnh một chút (phải tập trung vào ô chat riêng). | Bị phân tâm vì phải đọc cả một cây sơ đồ lớn. | **Giữ mạch học tốt nhất** vì tương tác trực tiếp cạnh công thức. |
 | **Sự lựa chọn ưu tiên của Tester 1** | **Xếp hạng 2**: Muốn dùng khi gặp công thức hoàn toàn mới và không biết mình dốt ở đâu. | **Xếp hạng 3**: Thích dùng để ôn tập cuối chương hơn là lúc đang kẹt bài. | **Xếp hạng 1**: Muốn dùng thường xuyên nhất khi đang đọc bài hàng ngày. |
 
-> **Ghi chú của Facilitator (Kim Chi)**: Tester 1 không bác bỏ Option nào, nhưng chỉ ra rõ sự đánh đổi: Option A giải quyết triệt để rào cản *"không biết mình không biết cái gì"*, trong khi Option C lại vượt trội về mặt *"duy trì mạch đọc không bị ngắt quãng"*.
+> **Ghi chú của Facilitator**: Tester 1 không bác bỏ Option nào, nhưng chỉ ra rõ sự đánh đổi: Option A giải quyết triệt để rào cản *"không biết mình không biết cái gì"*, trong khi Option C lại vượt trội về mặt *"duy trì mạch đọc không bị ngắt quãng"*.
