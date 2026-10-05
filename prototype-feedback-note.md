@@ -53,15 +53,15 @@
     > *“Cái này là tiện nhất này! Vừa đọc slide vừa bấm thẳng vào thuật ngữ xem giải thích nhanh được, không có cảm giác bị văng ra khỏi slide bài giảng hay phải mở tab mới.”*
   * *Về câu trắc nghiệm mini ở Option C*:  
     > *“Có cái câu hỏi 1 câu này hay nè, trả lời đúng cái là thấy tự tin hẳn, biết chắc là mình đã hiểu thật chứ không phải đọc vẹt.”*
-* **Thao tác vật lý ghi nhận**: Nam đọc lướt rất nhanh các định nghĩa dài dòng, nhưng sẽ khựng lại đọc từng từ một ở những chỗ có sự so sánh đối chiếu trực tiếp giữa *"Công nghệ nền tảng quen thuộc"* và *"Kiến trúc AI/Pipeline mới"*.
+* **Thao tác vật lý ghi nhận**: Nhung đọc lướt rất nhanh các định nghĩa dài dòng, nhưng sẽ khựng lại đọc từng từ một ở những chỗ có sự so sánh đối chiếu trực tiếp giữa *"Công nghệ nền tảng quen thuộc"* và *"Kiến trúc AI/Pipeline mới"*.
 
 ### 3.2. INTERPRETED (Nhóm diễn giải ma sát nhận thức của người học)
-1. **Bản chất của việc "quên kiến thức nền"**: Người học như Nam không hề mất gốc sạch công nghệ, mà điểm nghẽn thực sự là **họ không nhận ra kiến thức quen thuộc (Database, Index, Search) đang "biến hình" dưới dạng các thuật ngữ chuyên ngành AI mới**. Họ chỉ cần một cây cầu nối trong 30 giây để kích hoạt lại ký ức cũ.
-2. **Nỗi sợ đứt gãy mạch đọc (Context Switching Friction)**: Khi đang học qua slide, não bộ người học đang tập trung theo dòng chảy bài giảng. Việc phải mở một cửa sổ chat to đùng hay nhảy sang một trang sơ đồ lớn tạo ra ma sát tâm lý nặng nề, làm họ có cảm giác mình "kém cỏi" và đang phải học lại từ đầu. Đó là lý do Nam mê mẩn sự tiện lợi tại chỗ của Option C.
+1. **Bản chất của việc "quên kiến thức nền"**: Người học như Nhung không hề mất gốc sạch công nghệ, mà điểm nghẽn thực sự là **họ không nhận ra kiến thức quen thuộc (Database, Index, Search) đang "biến hình" dưới dạng các thuật ngữ chuyên ngành AI mới**. Họ chỉ cần một cây cầu nối trong 30 giây để kích hoạt lại ký ức cũ.
+2. **Nỗi sợ đứt gãy mạch đọc (Context Switching Friction)**: Khi đang học qua slide, não bộ người học đang tập trung theo dòng chảy bài giảng. Việc phải mở một cửa sổ chat to đùng hay nhảy sang một trang sơ đồ lớn tạo ra ma sát tâm lý nặng nề, làm họ có cảm giác mình "kém cỏi" và đang phải học lại từ đầu. Đó là lý do Nhung mê mẩn sự tiện lợi tại chỗ của Option C.
 3. **Giới hạn của sự tự do**: Option B cho người dùng toàn quyền tự do bấm, nhưng sự tự do đó biến thành gánh nặng nhận thức (*cognitive overload*) khi người học đang bối rối. Họ không muốn phải làm "thám tử" tự đi tìm vết nứt kiến thức trên bản đồ.
 
 ### 3.3. DECIDED — NEXT CHANGE (Quyết định cải tiến cụ thể của nhóm)
-Từ những phản ứng chân thật của Nam, nhóm quyết định không giữ nguyên vẹn một option đơn lẻ nào mà sẽ thực hiện tái cấu trúc:
+Từ những phản ứng chân thật của Nhung, nhóm quyết định không giữ nguyên vẹn một option đơn lẻ nào mà sẽ thực hiện tái cấu trúc:
 1. **Hợp nhất cơ chế chẩn đoán của Option A vào giao diện Inline của Option C**:
    * Khi người học bôi đen hoặc chọn một vùng thuật ngữ trên slide bài giảng, thanh công cụ inline của Option C sẽ hiện ra.
    * Nếu người học biết mình kẹt ở đâu $\rightarrow$ kéo slider xem giải thích tại chỗ.
@@ -73,5 +73,5 @@ Từ những phản ứng chân thật của Nam, nhóm quyết định không g
    * Giữ lại câu hỏi trắc nghiệm mini 1-click của Option C và biến nó thành tính năng mặc định sau mỗi lần bóc tách kiến thức để học viên tự kiểm chứng độ hiểu bài.
 
 ### 3.4. STILL UNPROVEN (Những điều chưa thể kết luận chỉ từ 1 buổi test)
-* **Khả năng duy trì kiến thức lâu dài**: Buổi test 25 phút mới chỉ chứng minh Nam vượt qua được điểm nghẽn tức thời và làm đúng câu trắc nghiệm ngay lúc đó. Nhóm chưa chứng minh được liệu 3 ngày sau Nam có còn nhớ cách vận hành của Vector Store khi gặp lại kiến trúc khác hay không.
+* **Khả năng duy trì kiến thức lâu dài**: Buổi test 25 phút mới chỉ chứng minh Nhung vượt qua được điểm nghẽn tức thời và làm đúng câu trắc nghiệm ngay lúc đó. Nhóm chưa chứng minh được liệu 3 ngày sau Nhung có còn nhớ cách vận hành của Vector Store khi gặp lại kiến trúc khác hay không.
 * **Độ bao phủ trên các dạng nội dung khác**: Bài test mới chỉ thực hiện trên một slide kiến trúc cụ thể (*Data Pipeline & Observability*). Chưa thể kết luận thanh trượt 3 mức độ sâu của Option C có phát huy hiệu quả tương tự khi áp dụng vào các đoạn mã nguồn cấu hình phức tạp hay không.
