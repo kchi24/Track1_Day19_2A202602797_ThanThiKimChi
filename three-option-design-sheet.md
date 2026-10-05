@@ -21,51 +21,12 @@ Nhóm cam kết xây dựng 3 giải pháp khác biệt về **cơ chế tương
 
 ---
 
-## 2. Human–AI Decision Table (Bảng thiết kế Human–AI 4 trụ cột)
+## 2. Human–AI Decision Table (Bảng thiết kế Human–AI 5 câu hỏi trọng tâm)
 
-### Trụ cột 1: Expectation (Thiết lập kỳ vọng)
-* **Option A**: 
-  * *AI làm gì*: Đặt kỳ vọng rõ ràng trước khi chat: *"AI sẽ hỏi 2 câu ngắn (khoảng 30 giây) để tìm xem bạn đang quên kiến thức nào"*.
-  * *AI KHÔNG làm gì*: Không giải bài tập thay, không viết code hộ, không đưa ra bài giảng dài dòng hàng chục trang.
-* **Option B**: 
-  * *Kỳ vọng*: Đây là bản đồ tham chiếu các viên gạch nền tảng; không phải bài kiểm tra chấm điểm. User biết mình có thể tra cứu nhanh bất kỳ lúc nào.
-* **Option C**: 
-  * *Kỳ vọng*: AI hoạt động như một kính lúp phân giải; giải thích từng ký tự toán học từ mức đơn giản nhất mà không làm gián đoạn dòng chảy bài đọc.
-
----
-
-### Trụ cột 2: Role & Agency (Vai trò & Quyền tự quyết)
-* **Option A (AI chủ động dẫn dắt)**:
-  * *Khởi xướng*: User bấm *"Tôi chưa hiểu đoạn này"*.
-  * *Dẫn dắt*: AI nắm quyền điều phối (chọn câu hỏi 1, câu hỏi 2).
-  * *Quyết định cuối*: User quyết định có bấm *"Đã hiểu, quay lại bài học"* hay chọn tự sửa.
-* **Option B (User chủ động khám phá)**:
-  * *Khởi xướng*: User mở bản đồ.
-  * *Dẫn dắt*: User toàn quyền chọn nút kiến thức nào mình muốn xem trước/sau.
-  * *AI*: Đóng vai trò cung cấp dữ liệu theo yêu cầu (On-demand).
-* **Option C (Đồng sáng tạo / Co-pilot)**:
-  * *Tương tác song hành*: User chọn đối tượng (ký hiệu) và biên độ phân tích (thanh trượt 1-2-3); AI tính toán và dựng nội dung bóc tách tương ứng trong thời gian thực.
-
----
-
-### Trụ cột 3: Evidence & Uncertainty (Bằng chứng & Sự không chắc chắn)
-* **Option A**:
-  * AI không khẳng định tuyệt đối. Kết quả hiển thị: *"Dựa trên lựa chọn của bạn ở câu 1 và 2, AI nhận diện 88% khả năng bạn đang nhầm lẫn ở khái niệm Đạo hàm riêng"*.
-  * Đưa ra lý giải vì sao đoán như vậy (bằng chứng từ câu trả lời của user).
-* **Option B**:
-  * Các nút trên bản đồ được gắn thẻ trạng thái dựa trên mức độ rủi ro thông thường: *[Nền tảng căn bản]* vs *[Vùng 85% học viên dễ nhầm lẫn nhất ⚠️]*.
-* **Option C**:
-  * Đánh dấu màu sắc tương ứng: Màu xanh lá cho phần kiến thức mới của bài học, màu cam/xanh lam cho phần kiến thức nền cũ từ cấp 3.
-
----
-
-### Trụ cột 4: Control & Recovery (Quyền kiểm soát & Phục hồi sai sót)
-* **Option A**:
-  * *Khi AI chẩn đoán sai*: Luôn có nút cứu cánh cố định:
-    1. `↺ Chẩn đoán lại từ đầu`: Cho phép làm lại lượt hỏi-đáp.
-    2. `⚠️ AI đoán sai? Tôi tự chọn bài ôn`: Cho phép người dùng gõ hoặc chọn trực tiếp khái niệm mình muốn ôn tập mà không bị bó buộc vào suy luận của AI.
-    3. Nút quay lại bài học bất kỳ lúc nào.
-* **Option B**:
-  * Nút `↺ Đặt lại bản đồ` giúp xóa các lựa chọn đã click; hiển thị danh sách phẳng nếu user không quen nhìn dạng cây.
-* **Option C**:
-  * Nút `Trở về mặc định` khôi phục văn bản nguyên bản; tính năng `Kiểm tra nhanh 1 câu trắc nghiệm` giúp user tự xác nhận mình đã thực sự hiểu chưa trước khi đóng thanh công cụ.
+| Human–AI decision | Option A<br>**Socratic Diagnostic Chat** | Option B<br>**Prerequisite Concept Radar** | Option C<br>**Inline Scaffolding Co-pilot** |
+| :--- | :--- | :--- | :--- |
+| **User làm gì? AI làm gì?** | • **User**: Bấm *"Tôi chưa hiểu"* $\rightarrow$ Chọn đáp án cho 2 câu hỏi $\rightarrow$ Đọc kết quả chẩn đoán và bài ôn 1 phút.<br>• **AI**: Đặt 2 câu hỏi gợi mở $\rightarrow$ Phân tích lựa chọn $\rightarrow$ Sinh thẻ ôn tập cấp tốc đúng lỗ hổng phát hiện. | • **User**: Duyệt cây phả hệ kiến thức $\rightarrow$ Bấm vào node nghi ngờ $\rightarrow$ Đọc thẻ đối chiếu.<br>• **AI**: Trực quan hóa cấu trúc tiên quyết $\rightarrow$ Hiển thị tóm tắt và liên hệ với bài mới khi được click. | • **User**: Bấm vào ký hiệu công thức gây bế tắc $\rightarrow$ Kéo thanh trượt điều chỉnh độ sâu (Mức 1, 2, 3).<br>• **AI**: Bóc tách cấu trúc công thức tức thời $\rightarrow$ Sinh nội dung giải phẫu tương ứng với độ sâu được chọn. |
+| **AI Act / Ask / Don't Act? Vì sao?** | **Ask $\rightarrow$ Act**:<br>AI chọn **Ask** (hỏi 2 câu) trước để xác định chính xác chỗ nghẽn, sau đó mới **Act** (sinh bài ôn tập). Vì nếu Act ngay (tự giải thích dài dòng) sẽ gây quá tải nhận thức như phản ánh ở Note 1 & Note 3. | **Don't Act (trừ khi User yêu cầu)**:<br>AI giữ trạng thái tĩnh, chờ đợi người dùng click. Vì User cần không gian tự do định vị lỗ hổng (metacognition) mà không bị AI can thiệp làm phiền. | **Act on Request (Co-pilot)**:<br>AI phản ứng tức thì theo từng thao tác kéo trượt của User. Vì User muốn kiểm soát độ sâu bóc tách trực tiếp tại chỗ mà không bị gián đoạn mạch đọc. |
+| **User hiểu capability/limit bằng gì?** | • **Capability**: Thông báo rõ ràng trước khi chat: *"AI hỏi 2 câu ngắn (30s) để tìm lỗ hổng"*, tập trung gỡ đúng 1 điểm kẹt.<br>• **Limit**: AI không giải bài hộ hay thay thế bài giảng chính; giới hạn trong mini-refresher 1 phút. | • **Capability**: Nhìn thấy toàn bộ phạm vi các mắt xích tiên quyết (Cấp 3 $\rightarrow$ Đại học) trên bản đồ.<br>• **Limit**: Bản đồ chỉ cung cấp đối chiếu, không tự biết người học yếu ở đâu nếu người học không tự click. | • **Capability**: 3 nấc trên thanh trượt (Nhắc nhanh 30s $\leftrightarrow$ So sánh cũ/mới $\leftrightarrow$ Ví dụ chi tiết) thể hiện rõ biên độ hỗ trợ.<br>• **Limit**: Chỉ bóc tách ký hiệu công thức cụ thể, không giải thích thay văn bản lý thuyết chung. |
+| **Evidence/uncertainty được thể hiện thế nào?** | Thể hiện bằng chỉ số xác suất và bằng chứng rõ ràng: *"Phát hiện lỗ hổng: Khái niệm Đạo hàm riêng (Độ tin cậy: 88%)"* dựa trên 2 câu trả lời vừa chọn. | Gắn nhãn trạng thái rủi ro trực quan trên các node: *[Nền tảng căn bản]* vs *[Vùng dễ nhầm lẫn nhất 85% ⚠️]*, giúp user biết nhánh nào có nguy cơ cao nhất. | Mã hóa màu sắc tương phản: Ký hiệu mới (xanh lá) phân rã thành các phép toán quen thuộc (cam/xanh lam) kèm nhãn "Phân rã Mức 1/2/3". |
+| **User kiểm soát và recovery thế nào?** | • **Kiểm soát**: Tự do chọn đáp án, bấm quay lại bài học bất kỳ lúc nào.<br>• **Recovery**: Có sẵn nút `↺ Chẩn đoán lại từ đầu` và nút `⚠️ AI đoán sai? Tôi tự chọn bài ôn` (User Override để tự chọn chủ đề). | • **Kiểm soát**: Toàn quyền click chọn hoặc bỏ chọn các node trên cây kiến thức.<br>• **Recovery**: Nút `↺ Đặt lại bản đồ` giúp xóa các lựa chọn đã click; hiển thị danh sách phẳng nếu user không quen nhìn sơ đồ. | • **Kiểm soát**: Thanh trượt kéo thả tự do để tăng/giảm độ sâu; nút mini-quiz để tự kiểm tra.<br>• **Recovery**: Nút `Trở về mặc định` để đóng phần phân rã và trả lại giao diện nguyên bản của công thức. |
