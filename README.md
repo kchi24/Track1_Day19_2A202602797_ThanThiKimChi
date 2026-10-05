@@ -14,7 +14,7 @@
 | **Case đã chọn** | Case A — AI Tutor: Diagnostic Refresher |
 
 * **Phân công trách nhiệm cá nhân**:
-  * **Thân Thị Kim Chi (2A202602797 — Chủ Repository)**: Chịu trách nhiệm chính xây dựng **Option B (Prerequisite Concept Radar)**; đồng điều phối xây dựng 70% bối cảnh chung; trực tiếp điều phối (facilitate) Phiên thử nghiệm 1 với Tester ngoài nhóm (Nguyễn Thị Hồng Nhung).
+  * **Thân Thị Kim Chi**: Chịu trách nhiệm chính xây dựng **Option B (Prerequisite Concept Radar)**; đồng điều phối xây dựng 70% bối cảnh chung; trực tiếp điều phối (facilitate) Phiên thử nghiệm 1 với Tester ngoài nhóm (Nguyễn Thị Hồng Nhung).
   * **Ngô Lê Thủy Tiên**: Chịu trách nhiệm chính xây dựng **Option A (Socratic Diagnostic Chat)**; tham gia xây dựng kịch bản câu hỏi chẩn đoán và trực tiếp điều phối Phiên thử nghiệm 2.
   * **Nguyễn Khánh Linh**: Chịu trách nhiệm chính xây dựng **Option C (Inline Scaffolding Co-pilot)**; tham gia thiết kế thanh trượt độ sâu phân rã kiến thức và trực tiếp điều phối Phiên thử nghiệm 3.
 
