@@ -1,7 +1,7 @@
 # Group Feedback Synthesis (Tổng Hợp Phản Hồi Nhóm & Group Next Change)
 
 > **Case nghiên cứu**: Case A — AI Tutor: Diagnostic Refresher  
-> **Nhóm thực hiện**: Nhóm 3 thành viên (Case A)  
+> **Nhóm thực hiện**: Nhóm HKT (Thành viên: Ngô Lê Thủy Tiên, Thân Thị Kim Chi, Nguyễn Khánh Linh)  
 > **Nguyên tắc cốt lõi**: GATE 5 — *Learning, not praise*. Tổng hợp dựa trên hành vi thực tế và sự đánh đổi của 3 Tester độc lập, tuyệt đối không đưa ra kết luận "được kiểm chứng (validated)".
 
 ---

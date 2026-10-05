@@ -5,14 +5,18 @@
 
 ## 1. Thông tin cá nhân & Đội ngũ
 
-* **Họ và tên**: Thân Thị Kim Chi  
-* **Mã sinh viên**: 2A202602797  
-* **Tên nhóm**: Nhóm 2A  
-* **Danh sách 3 thành viên trong nhóm**:
-  1. **Thân Thị Kim Chi (2A202602797 — Chủ Repository)**: Chịu trách nhiệm chính xây dựng **Option B (Prerequisite Concept Radar)**; đồng điều phối xây dựng 70% bối cảnh chung; trực tiếp điều phối (facilitate) Phiên thử nghiệm 1 với Tester ngoài nhóm (Nguyễn Thị Hồng Nhung).
-  2. **Thành viên 2**: Chịu trách nhiệm chính xây dựng **Option A (Socratic Diagnostic Chat)**; tham gia xây dựng kịch bản câu hỏi chẩn đoán và trực tiếp điều phối Phiên thử nghiệm 2.
-  3. **Thành viên 3**: Chịu trách nhiệm chính xây dựng **Option C (Inline Scaffolding Co-pilot)**; tham gia thiết kế thanh trượt độ sâu phân rã kiến thức và trực tiếp điều phối Phiên thử nghiệm 3.
-* **Case bài toán nghiên cứu**: **Case A — AI Tutor: Diagnostic Refresher** (Tiếp nối trực tiếp từ phát hiện nghiên cứu người dùng tại Day 17).
+| Mục | Thông tin chi tiết |
+| :--- | :--- |
+| **MHV** | 2A202602797 |
+| **Họ tên** | Thân Thị Kim Chi |
+| **Tên nhóm** | Nhóm HKT |
+| **Thành viên** | Ngô Lê Thủy Tiên, Thân Thị Kim Chi, Nguyễn Khánh Linh |
+| **Case đã chọn** | Case A — AI Tutor: Diagnostic Refresher |
+
+* **Phân công trách nhiệm cá nhân**:
+  * **Thân Thị Kim Chi (2A202602797 — Chủ Repository)**: Chịu trách nhiệm chính xây dựng **Option B (Prerequisite Concept Radar)**; đồng điều phối xây dựng 70% bối cảnh chung; trực tiếp điều phối (facilitate) Phiên thử nghiệm 1 với Tester ngoài nhóm (Nguyễn Thị Hồng Nhung).
+  * **Ngô Lê Thủy Tiên**: Chịu trách nhiệm chính xây dựng **Option A (Socratic Diagnostic Chat)**; tham gia xây dựng kịch bản câu hỏi chẩn đoán và trực tiếp điều phối Phiên thử nghiệm 2.
+  * **Nguyễn Khánh Linh**: Chịu trách nhiệm chính xây dựng **Option C (Inline Scaffolding Co-pilot)**; tham gia thiết kế thanh trượt độ sâu phân rã kiến thức và trực tiếp điều phối Phiên thử nghiệm 3.
 
 ---
 
