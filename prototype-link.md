@@ -52,3 +52,35 @@ Tester có thể dễ dàng chuyển đổi qua lại giữa 3 Option bằng tha
    * *Mức 2*: So sánh kiến thức cũ $\leftrightarrow$ kiến thức mới.
    * *Mức 3*: Đào sâu kèm ví dụ bài toán cụ thể.
 4. Bấm nút **"✍️ Làm 1 câu trắc nghiệm nhanh để kiểm tra hiểu chưa"** để thử nghiệm tính năng xác nhận độ thông suốt.
+
+---
+
+## 3. Prototype Annotation (Ghi chú kịch bản quan sát cho Facilitator)
+
+> *Đặt ngoài frame kiểm thử, chỉ dành cho người điều phối quan sát (không hiện cho tester):*
+
+### OPTION A: Socratic Diagnostic Chat
+* **We expect the tester to**: Bấm nút *"Tôi chưa hiểu đoạn này"* bên cạnh công thức, đọc 2 câu hỏi gợi mở của AI và bấm chọn đáp án, xem kết luận chẩn đoán và bấm quay lại bài học hoặc thử override.
+* **Watch for**: Tester có đọc kỹ 2 câu hỏi chẩn đoán không hay bấm bừa? Có nhận ra độ tin cậy 88% không? Có để ý thấy nút *"AI đoán sai? Tôi tự chọn bài ôn"* không?
+* **Do not explain**: Không giải thích công thức toán hộ tester; không chỉ trước nút *"Tôi chưa hiểu"*; không giải thích câu hỏi chẩn đoán nghĩa là gì.
+
+### OPTION B: Prerequisite Concept Radar
+* **We expect the tester to**: Mở tab Option B, nhìn vào cây sơ đồ phả hệ kiến thức, tự click vào node được cảnh báo hoặc các node khác, đọc phần đối chiếu liên hệ với bài mới.
+* **Watch for**: Tester bị thu hút bởi node nào trước tiên? Có bị ngợp trước các mũi tên phân cấp không? Có hiểu tại sao node Đạo hàm riêng lại có viền màu cam cảnh báo không?
+* **Do not explain**: Không chỉ tester bấm vào ô màu cam; không giải thích cấu trúc cây phả hệ; không đọc hộ phần đối chiếu.
+
+### OPTION C: Inline Scaffolding Co-pilot
+* **We expect the tester to**: Mở tab Option C, click vào ký hiệu $\frac{\partial L}{\partial w}$ hoặc các thành phần khác của công thức, kéo thanh trượt độ sâu qua các mức 1, 2, 3 và thử làm câu trắc nghiệm nhanh.
+* **Watch for**: Tester dừng lại ở mức độ sâu nào lâu nhất (Mức 1, 2 hay 3)? Có phát hiện ra câu hỏi mini-quiz không? Thao tác kéo trượt có tự nhiên không?
+* **Do not explain**: Không hướng dẫn tester phải kéo slider; không nhắc tester làm quiz; không giải thích ý nghĩa các mức 1, 2, 3.
+
+---
+
+## 4. GATE 4 — Test-Ready Checklist
+
+- [x] **Tester tự thao tác A/B/C**: Chạy trực tiếp trên trình duyệt qua file [`index.html`](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/index.html).
+- [x] **Cùng 1 context và task**: Khung bên trái cố định bài giảng Machine Learning và công thức Gradient Descent.
+- [x] **Không cần narration**: Các bước hướng dẫn và nút bấm tự giải thích.
+- [x] **Nội dung thực tế**: Toán giải tích và logic chẩn đoán chân thực.
+- [x] **Control & Recovery**: Nút Chẩn đoán lại, Nút User Override, Reset radar, Reset slider.
+- [x] **Reset path**: Luôn có nút quay lại mạch học ban đầu.

@@ -106,16 +106,81 @@ Nhóm chi tiết hóa 4 trụ cột tương tác cho cả 3 Option trong **Human
 
 ---
 
-### Chặng 4 — Xây dựng Micro-prototype (80 phút)
+### Chặng 4 — Build ba micro-prototype (80 phút)
 
-* **Kiến trúc Prototype**: Xây dựng trực tiếp bằng Vanilla HTML5, CSS3 và JavaScript hiện đại ([index.html](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/index.html), [style.css](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/style.css), [app.js](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/app.js)).
-* **Ngữ cảnh dùng chung (70% Context)**: Khung bên trái hiển thị nguyên vẹn bài giảng *"Thuật toán Gradient Descent & Chain Rule"* với công thức cập nhật trọng số gây bế tắc:
-  $$w_{new} = w_{old} - \eta \cdot \frac{\partial L}{\partial w}$$
-* **Phân định 3 Interaction States (Khung bên phải)**:
-  * **Tab Option A**: Cửa sổ hội thoại 2 bước (Hỏi $\rightarrow$ Trả lời $\rightarrow$ Thẻ chẩn đoán 88% tin cậy $\rightarrow$ Ôn tập 1 phút $\rightarrow$ User Override).
-  * **Tab Option B**: Sơ đồ phân nhánh 2 tầng (Cấp 3 $\rightarrow$ Toán đa biến), nhấp chuột vào từng node để mở thẻ đối chiếu kiến thức cũ/mới.
-  * **Tab Option C**: Tương tác trực tiếp trên các ký hiệu của công thức, thanh trượt 3 mức độ sâu (Nhắc nhanh $\leftrightarrow$ So sánh $\leftrightarrow$ Ví dụ) và mini-quiz 1 câu.
-* **Cơ chế chuyển đổi (Tab Switcher)**: Tích hợp ngay trên Header, giúp người kiểm thử chuyển đổi nhanh giữa A, B, C trong cùng 1 phiên test.
+#### 1. Scope chuẩn (Luồng 3 trạng thái & 70% Common Context)
+Mỗi option được thiết kế tinh gọn theo đúng luồng 3 bước quanh điểm tương tác then chốt (*Critical Interaction*):
+```
+COMMON CONTEXT (70% bài giảng chung)
+                 ↓
+CRITICAL INTERACTION (Điểm can thiệp riêng của A / B / C)
+                 ↓
+RESULT / USER DECISION (Kết quả gỡ kẹt & Quyền tự quyết / Recovery)
+```
+
+* **70% dùng chung (Common Ground)**:
+  * *Context screen*: Giao diện bài học trực tuyến khóa *Nhập môn Machine Learning · Bài 4*.
+  * *Content/data fixture*: Bài giảng *"Thuật toán Gradient Descent & Quy tắc Chuỗi (Chain Rule)"*.
+  * *Critical point*: Công thức cập nhật trọng số gây bế tắc:
+    $$w_{new} = w_{old} - \eta \cdot \frac{\partial L}{\partial w}$$
+  * *Task & Desired outcome*: Tìm ra phần kiến thức nền tảng đang thiếu hụt và gỡ kẹt trong dưới 1 phút.
+* **30% khác biệt ở Critical Interaction**:
+  * **Option A**: Nút *"Tôi chưa hiểu đoạn này"* kích hoạt Socratic Diagnostic Chat 2 bước.
+  * **Option B**: Bản đồ Concept Radar trực quan hóa các mắt xích kiến thức (Cấp 3 $\rightarrow$ Đại học).
+  * **Option C**: Inline Scaffolding bóc tách công thức tại chỗ với thanh trượt 3 mức độ sâu.
+
+---
+
+#### 2. Definition of Testable (Tiêu chí sẵn sàng kiểm thử)
+- [x] **Tự chủ tác vụ**: Tester có thể tự mở file [`index.html`](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/index.html) và tự do thao tác trên cả 3 option mà không cần cài đặt.
+- [x] **Khởi đầu nhất quán**: Cả 3 option đều bắt đầu từ cùng một bài giảng và công thức toán thực tế.
+- [x] **Tự giải thích (Self-explanatory)**: Giao diện và các nút bấm rõ ràng, không cần facilitator dẫn dắt hay thuyết minh hộ.
+- [x] **Dữ liệu thật (Realistic Canned Output)**: Kiến thức toán học, câu hỏi chẩn đoán và nội dung ôn tập chính xác về mặt giải tích, đủ thật để tester ra quyết định.
+- [x] **Điểm phục hồi quyền kiểm soát (Control & Recovery)**: Có đủ nút `↺ Reset`, `User Override` (tự chọn bài ôn), và `Trở về mặc định`.
+- [x] **Đường quay về context ban đầu**: Luôn có nút quay lại đọc tiếp bài học sau khi gỡ rối xong.
+
+---
+
+#### 3. Tiến độ thực hiện (Build Order 80 phút)
+| Thời gian | Nội dung công việc | Kết quả đạt được |
+| :---: | :--- | :--- |
+| **Phút 0–10** | Dựng khung Layout chuẩn 2 cột: Cột trái cố định bài học mẫu (70% context), cột phải là Interaction Panel. | Hoàn thành HTML ngữ cảnh bài giảng và công thức Gradient Descent. |
+| **Phút 10–55** | Xây dựng logic tương tác cho 3 Option bằng Vanilla HTML/CSS/JS. | • Option A: Flow chat 2 bước Socratic.<br>• Option B: Cây phả hệ node tương tác.<br>• Option C: Bộ bóc tách ký hiệu và slider 3 nấc. |
+| **Phút 55–65** | Bổ sung các thành tố Evidence/Uncertainty và Control/Recovery. | • Badge độ tin cậy 88%, nhãn vùng rủi ro ⚠️.<br>• Nút Chẩn đoán lại, Nút User Override, Mini-quiz. |
+| **Phút 65–75** | Kiểm thử chéo giữa các thành viên trong nhóm. | Thử đóng vai tester click thử các option, phát hiện lỗi tràn khung chat và đã fix CSS. |
+| **Phút 75–80** | Chuẩn hóa giao diện A/B/C, kiểm tra đường dẫn cục bộ và nút reset. | Prototype test-ready 100%, chuyển tab mượt mà trên trình duyệt. |
+
+---
+
+#### 4. Prototype Annotation (Ghi chú kịch bản quan sát cho Facilitator)
+
+> *Đặt ngoài frame kiểm thử, chỉ dành cho người điều phối quan sát:*
+
+```
+[OPTION A: Socratic Diagnostic Chat]
+• We expect the tester to: Bấm nút "Tôi chưa hiểu đoạn này" bên cạnh công thức, đọc 2 câu hỏi gợi mở của AI và bấm chọn đáp án, xem kết luận chẩn đoán và bấm quay lại bài học hoặc thử override.
+• Watch for: Tester có đọc kỹ 2 câu hỏi chẩn đoán không hay bấm bừa? Có nhận ra độ tin cậy 88% không? Có để ý thấy nút "AI đoán sai? Tôi tự chọn bài ôn" không?
+• Do not explain: Không giải thích công thức toán hộ tester; không chỉ trước nút "Tôi chưa hiểu"; không giải thích câu hỏi chẩn đoán nghĩa là gì.
+```
+
+```
+[OPTION B: Prerequisite Concept Radar]
+• We expect the tester to: Mở tab Option B, nhìn vào cây sơ đồ phả hệ kiến thức, tự click vào node được cảnh báo hoặc các node khác, đọc phần đối chiếu liên hệ với bài mới.
+• Watch for: Tester bị thu hút bởi node nào trước tiên? Có bị ngợp trước các mũi tên phân cấp không? Có hiểu tại sao node Đạo hàm riêng lại có viền màu cam cảnh báo không?
+• Do not explain: Không chỉ tester bấm vào ô màu cam; không giải thích cấu trúc cây phả hệ; không đọc hộ phần đối chiếu.
+```
+
+```
+[OPTION C: Inline Scaffolding Co-pilot]
+• We expect the tester to: Mở tab Option C, click vào ký hiệu ∂L/∂w hoặc các thành phần khác của công thức, kéo thanh trượt độ sâu qua các mức 1, 2, 3 và thử làm câu trắc nghiệm nhanh.
+• Watch for: Tester dừng lại ở mức độ sâu nào lâu nhất (Mức 1, 2 hay 3)? Có phát hiện ra câu hỏi mini-quiz không? Thao tác kéo trượt có tự nhiên không?
+• Do not explain: Không hướng dẫn tester phải kéo slider; không nhắc tester làm quiz; không giải thích ý nghĩa các mức 1, 2, 3.
+```
+
+---
+
+#### GATE 4 — Test-ready Confirmation:
+- [x] Một người ngoài nhóm có thể mở file [`index.html`](file:///d:/Track1_Day19_2A202602797_ThanThiKimChi/index.html), thực hiện trọn vẹn task trên cả A/B/C và quay về bài học ban đầu mà không cần ai giải thích hộ.
 
 ---
 
